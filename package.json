@@ -1,0 +1,27 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simo0103/HOME.git"
+  },
+  "author": "SIMONA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simo0103/HOME/issues"
+  },
+  "homepage": "https://github.com/simo0103/HOME#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch-sass": "^1.4.1"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  }
+}

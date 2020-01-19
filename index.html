@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./script/api/menu.js"></script>
+    <script src="./script/api/bar.js"></script>
+    <link rel="stylesheet" href="./style/css/style.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./script/script.js"></script>
+    <script src="https://kit.fontawesome.com/2fa960e22b.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="hamburgerContainer">
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div class="logo">
+                <img src="./style/images/svg/logo.png" width="90px" alt="dragon logo" />
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="home" href="#home">home</a></li>
+                <li><a class="menu" href="#menu">menu</a></li>
+                <li><a class="bar" href="#bar">bar</a></li>
+                <li class="logo"><img src="./style/images/svg/logo.png" width="90px" alt="dragon logo" /></li>
+               
+                <li><a class="eventi" href="#eventi">eventi</a></li>
+                <li><a class="gallery" href="#gallery">galleria</a></li>
+                <li><a class="contacts" href="#contacts">dove siamo</a></li>
+                <li class="slider"></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article id="home" class="cover">
+            <div class="coverContainer">
+                <div class="desktopSlider">
+                    <div>
+                        <img src="./style/images/desktop/sala2.jpg" alt="banner" />
+                    </div>
+                    <div>
+                        <img src="./style/images/desktop/bulldog2.jpg" alt="banner" />
+                    </div>
+                    <div>
+                        <img src="./style/images/desktop/bar.jpg" alt="banner" />
+                    </div>
+                    <div>
+                        <img src="./style/images/desktop/dish.jpg" alt="banner" />
+                    </div>
+                    <div>
+                        <img src="./style/images/desktop/dish.jpg" alt="banner" />
+                    </div>
+                </div>
+                <div class="mobileSlider">
+                    <div><img src="./style/images/mobile/dish.jpg" alt="banner" /></div>
+                    <div><img src="./style/images/mobile/dish.jpg" alt="banner" /></div>
+                    <div><img src="./style/images/mobile/dish.jpg" alt="banner" /></div>
+                    <div><img src="./style/images/mobile/dish.jpg" alt="banner" /></div>
+                    <div><img src="./style/images/mobile/dish.jpg" alt="banner" /></div>
+                </div>
+                <a class="fa fa-angle-down animated bounce" href="#introduction"></a>
+            </div>
+            <div id="introduction" class="introduction">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                    numquam eligendi accusamus reiciendis est fuga totam hic. Officiis
+                    recusandae corrupti minima laudantium pariatur sed minus
+                </p>
+
+                <div id="galleria" class="galleria">
+
+                    <div class="first section">
+                        <div class="middle">
+                            <img src="style/images/desktop/tagliatelle.jpg" alt="food" />
+                        </div>
+                        <div class="left">
+                            <div class="content">
+                                <h3>cucina bolognese</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repellendus natus,
+                                    repellat, beatae
+                                    deleniti praesentium cum dolore excepturi quos libero ad aliquam quod aspernatur ab
+                                    ullam nulla</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="overlay">
+                            </div>
+                            <img src="style/images/desktop/tagliatelle2.jpg" alt="food" />
+                        </div>
+                    </div>
+
+                    <div class="second section">
+                        <div class="middle">
+                            <div class="content">
+                                <h3>hamburger</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repellendus natus,
+                                    repellat, beatae
+                                    deleniti praesentium cum dolore excepturi quos libero ad aliquam quod aspernatur ab
+                                    ullam nulla</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="style/images/desktop/burger.jpg" alt="food" />
+
+                        </div>
+                        <div class="left">
+                            <div class="overlay">
+                            </div>
+                            <img src="style/images/desktop/burger.jpg" alt="food" />
+                        </div>
+                    </div>
+
+                    <div class="third section">
+                        <div class="middle">
+                            <img src="style/images/desktop/glass.jpg" alt="food" />
+                        </div>
+                        <div class="left">
+                            <div class="content">
+                                <h3>birre</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repellendus natus,
+                                    repellat, beatae
+                                    deleniti praesentium cum dolore excepturi quos libero ad aliquam quod aspernatur ab
+                                    ullam nulla</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="overlay">
+                            </div>
+                            <img src="style/images/desktop/bar.jpg" alt="food" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <div class="site-content">
+
+
+
+            <article id="menu" class="menu">
+                <h2>Menu</h2>
+                <div class="divider">
+                    <img src="./style/images/svg/primi.svg" alt="divider">
+                </div>
+
+                <div class="menuList">
+                    <div class="primi open">
+
+                        <div class="titleAndArrowContainer">
+                            <h3>primi</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="elenco">
+                            <div class="pastadisemola">
+                                <h3>pasta di semola</h3>
+                            </div>
+                            <div class="pastafresca">
+                                <h3>pasta fresca e all'uovo</h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="secondi">
+                        <div class="titleAndArrowContainer">
+                            <h3>secondi e contorni</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="elenco">
+                            <div class="secondi">                             
+                                <h3>secondi</h3>                         
+                            </div>
+                            <div class="contorni">                           
+                                <h3>contorni</h3>                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="piattifreddi">
+                        <div class="titleAndArrowContainer">
+                            <h3>piatti freddi</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="hamburgerpanini">
+                        <div class="titleAndArrowContainer">
+                            <h3>hamburger e panini</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="elenco">
+                            <div class="hamburger">                             
+                                <h3>hamburger</h3>                         
+                            </div>
+                            <div class="panini">                           
+                                <h3>panini</h3>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="bar" class="bar">
+                <h2>bar</h2>
+                <div class="divider">
+
+                    <img src="./style/images/svg/beer.svg" alt="divider">
+
+                </div>
+                <div class="barList">
+                    <div class="birre">
+                        <h3>birre</h3>
+                    </div>
+
+                    <div class="birreInBottiglia">
+                        <h3>birre in bottiglia</h3>
+                    </div>
+
+                    <!-- <div class="vini">
+                        <h3>vini</h3>
+                    </div> -->
+
+                    <!-- <div class="bibite">
+                        <h3>bibite</h3>
+                    </div>
+
+                    <div class="amari">
+                        <h3>amari</h3>
+                    </div> -->
+                </div>
+            </article>
+
+            <article id="eventi">
+                <!-- <h2>
+                    le partite del mese
+                </h2>
+                <div>
+
+                    <ul>
+                        <p class="data">sabato 02 gennaio 2020</p>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <p class="data">domenica 03 gennaio 2020</p>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <p class="data">domenica 03 gennaio 2020</p>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <p class="data">domenica 03 gennaio 2020</p>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <p class="data">domenica 03 gennaio 2020</p>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <p class="data">domenica 03 gennaio 2020</p>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <p class="data">domenica 03 gennaio 2020</p>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <p class="data">domenica 03 gennaio 2020</p>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+                        <li>
+                            <span>ore 20:45</span>
+                            <span class="squadre">sampdoria - atalanta</span>
+                        </li>
+
+                    </ul>
+                </div> -->
+                <h2>Gli eventi del mese</h2>
+                <div class="wrapper">
+
+
+                    <div class="eventContainer">
+                        <div class="data">
+                            <p>10</p>
+                            <p>gennaio</p>
+                        </div>
+                        <div class="eventName">
+                            <span>ore 20:45</span>
+                            <p>atalanta - sampdoria</p>
+                            <p>roma - juventus</p>
+                        </div>
+
+                    </div>
+                    <div class="eventContainer">
+                        <div class="data">
+                            <p>10</p>
+                            <p>settembre</p>
+                        </div>
+                        <div class="eventName">
+                            <span>ore 20:45</span>
+                            <p>atalanta - sampdoria</p>
+                            <p>roma - juventus</p>
+                        </div>
+                    </div>
+                    <div class="eventContainer">
+                        <div class="data">
+                            <p class="day">10</p>
+                            <p>novembre</p>
+                        </div>
+                        <div class="eventName">
+                            <span>ore 15:00</span>
+                            <p>inter - bologna</p>
+                            <p>roma - juventus</p>
+                            <span>ore 20:45</span>
+                            <p>atalanta - sampdoria</p>
+                            <p>roma - juventus</p>
+                        </div>
+                    </div>
+                    <div class="eventContainer">
+                        <div class="data">
+                            <p>10</p>
+                            <p>gennaio</p>
+                        </div>
+                        <div class="eventName">
+                            <span>ore 20:45</span>
+                            <p>atalanta - sampdoria</p>
+                            <p>roma - juventus</p>
+                        </div>
+                    </div>
+                    <div class="eventContainer">
+                        <div class="data">
+                            <p>10</p>
+                            <p>gennaio</p>
+                        </div>
+                        <div class="eventName">
+                            <span>ore 20:45</span>
+                            <p>atalanta - sampdoria</p>
+                            <p>roma - juventus</p>
+                        </div>
+                    </div>
+                    <div class="eventContainer">
+                        <div class="data">
+                            <p>10</p>
+                            <p>gennaio</p>
+                        </div>
+                        <div class="eventName">
+                            <span>ore 20:45</span>
+                            <p>atalanta - sampdoria</p>
+                            <p>roma - juventus</p>
+                        </div>
+                    </div>
+                    <div class="eventContainer">
+                        <div class="data">
+                            <p>10</p>
+                            <p>gennaio</p>
+                        </div>
+                        <div class="eventName">
+                            <span>ore 20:45</span>
+                            <p>atalanta - sampdoria</p>
+                            <p>roma - juventus</p>
+                        </div>
+                    </div>
+                    <div class="eventContainer">
+                        <div class="data">
+                            <p>10</p>
+                            <p>gennaio</p>
+                        </div>
+                        <div class="eventName">
+                            <span>ore 20:45</span>
+                            <p>atalanta - sampdoria</p>
+                            <p>roma - juventus</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="gallery">
+                <h2>ricordando gli altri anni...</h2>
+                <div class="gallery">
+                    <img src="style/images/desktop/img1.jpg" alt="img1" />
+                    <img src="style/images/desktop/img2.jpg" alt="img1" />
+                    <img src="style/images/desktop/img3.jpg" alt="img1" />
+                    <img src="style/images/desktop/img4.jpg" alt="img1" />
+                    <img src="style/images/desktop/img5.jpg" alt="img1" />
+                    <img src="style/images/desktop/img6.jpg" alt="img1" />
+                </div>
+            </article>
+            <article id="contacts">
+                <h2>dove siamo</h2>
+                <div class="wrapper">
+                    <div class="orari">
+                        <p>orari</p>
+                        <ul>
+                            <li>
+                                <span>Lunedì</span>
+                                <span>18:00 - 02:00</span>
+                            </li>
+                            <li>
+                                <span>Martedì</span>
+                                <span>18:00 - 02:00</span>
+                            </li>
+                            <li>
+                                <span>Mercoledì</span>
+                                <span>18:00 - 02:00</span>
+                            </li>
+                            <li>
+                                <span>Giovedì</span>
+                                <span>18:00 - 02:00</span>
+                            </li>
+                            <li>
+                                <span>Venerdì</span>
+                                <span>18:00 - 03:00</span>
+                            </li>
+                            <li>
+                                <span>Sabato</span>
+                                <span>18:00 - 03:00</span>
+                            </li>
+                            <li>
+                                <span>Domenica</span>
+                                <span>18:00 - 02:00</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="mapContainer">
+                        <div class="gmap">
+                            <iframe width="100%" height="600" id="gmap"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.5320723629443!2d11.36072131564886!3d44.50425397910134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4a9165dec7f%3A0x4fe5ceb7ec4306c4!2sDragon%20Pub!5e0!3m2!1sen!2sit!4v1578057803396!5m2!1sen!2sit"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+
+                    </div>
+
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="contattiContainer">
+
+            <div class="address">
+
+                <span class="fas fa-map-marker-alt"></span>
+                <p>Via della Repubblica 32</p>
+            </div>
+            <div class="phone">
+                <span class="fas fa-phone-alt"></span>
+                <p>051 516022</p>
+            </div>
+            <div class="mail">
+                <span class="far fa-envelope"></span>
+                <p>dragonpub@gmail.com</p>
+            </div>
+            <div class="social">
+                <span class="fab fa-facebook-square"></span>
+                <span class="fab fa-instagram"></span>
+            </div>
+        </div>
+
+        <p class="privacy">Privacy Policy</p>
+
+        </div>
+
+
+    </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js">
+    </script>
+</body>
+
+</html>
