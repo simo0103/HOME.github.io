@@ -28,8 +28,11 @@ h2 {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 27px;
   text-transform: uppercase;
+  .desktopView {
+    font-size: 30px;
+  }
 }
 
 //-------------------------------//
@@ -352,6 +355,7 @@ main {
       img {
         width: 49.5%;
         padding: 0.3% 0;
+        object-fit: cover;
 
         .desktopView & {
           width: 33%;
@@ -385,10 +389,26 @@ main {
   #menu {
     text-transform: uppercase;
 
-    .titleAndArrowContainer,
-    .elenco {
+    .titleAndArrowContainer {
       display: flex;
       justify-content: space-between;
+    }
+    
+    .elenco {
+      text-align: center;
+      h4 {
+        margin-bottom: 20px;
+        font-size: 23px;
+      }
+      div:not(.piatto) {
+        margin-bottom: 10px;
+      }
+      .desktopView & {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        
+      }
     }
   
 

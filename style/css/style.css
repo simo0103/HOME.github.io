@@ -23,8 +23,10 @@ h2 {
   font-size: 40px; }
 
 h3 {
-  font-size: 30px;
+  font-size: 27px;
   text-transform: uppercase; }
+  h3 .desktopView {
+    font-size: 30px; }
 
 header .hamburgerContainer {
   background-color: black;
@@ -216,7 +218,8 @@ main #gallery .gallery {
   flex-wrap: wrap; }
   main #gallery .gallery img {
     width: 49.5%;
-    padding: 0.3% 0; }
+    padding: 0.3% 0;
+    object-fit: cover; }
     .desktopView main #gallery .gallery img {
       width: 33%; }
   main #gallery .gallery .slick-slide {
@@ -235,10 +238,20 @@ main .divider {
 
 main #menu {
   text-transform: uppercase; }
-  main #menu .titleAndArrowContainer,
-  main #menu .elenco {
+  main #menu .titleAndArrowContainer {
     display: flex;
     justify-content: space-between; }
+  main #menu .elenco {
+    text-align: center; }
+    main #menu .elenco h4 {
+      margin-bottom: 20px;
+      font-size: 23px; }
+    main #menu .elenco div:not(.piatto) {
+      margin-bottom: 10px; }
+    .desktopView main #menu .elenco {
+      display: flex;
+      justify-content: space-between;
+      text-align: left; }
   main #menu .fas {
     font-size: 20px; }
   main #menu .menuList > div {
