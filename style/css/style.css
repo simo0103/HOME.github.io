@@ -19,7 +19,7 @@ html {
 h2 {
   text-transform: uppercase;
   text-align: center;
-  margin: 20px 0 40px;
+  padding: 20px 0 40px;
   font-size: 40px; }
 
 h3 {
@@ -91,8 +91,7 @@ header nav {
       display: block; }
     .desktopView header nav.sticky {
       background-color: black;
-      box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.75);
-      height: 80px; }
+      box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.75); }
       .desktopView header nav.sticky ul {
         position: relative; }
         .desktopView header nav.sticky ul li a {
@@ -109,7 +108,7 @@ header nav {
     height: 100vh; }
     .desktopView header nav ul {
       flex-direction: row;
-      height: 80px;
+      height: 100px;
       justify-content: center;
       width: 90%;
       margin: 0 auto; }
@@ -146,7 +145,8 @@ header nav {
           transition: left 0.2s linear; }
 
 main .cover {
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 50px; }
   main .cover > div {
     position: relative; }
   main .cover .slick-dots {
@@ -194,7 +194,8 @@ main .site-content {
   width: 95%;
   margin: auto; }
   .desktopView main .site-content article {
-    min-height: 100vh; }
+    min-height: 100vh;
+    padding-bottom: 50px; }
 
 main .introduction > p {
   text-transform: uppercase;

@@ -3,7 +3,7 @@ $(document).ready(function() {
     $link = $('a[href*="#"]'),
     CLASS_ACTIVE = "active",
     CLASS_OPEN = "open",
-    navbarHeight = 80,
+    navbarHeight = 100,
     isMobile =
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
@@ -99,7 +99,7 @@ $(document).ready(function() {
         offsetUl = $("nav ul").offset().left,
         slidingBorder = $("nav ul .slider");
 
-      if ($el.hasClass(CLASS_ACTIVE)) {
+      if ($el.hasClass(CLASS_ACTIVE) && !isMobile) {
         console.log("offset" + $el.offset().left);
         var distanceFromLeft = $el.offset().left - offsetUl;
         slidingBorder.css("left", distanceFromLeft);
@@ -112,7 +112,7 @@ $(document).ready(function() {
 
   //scroll into the view
   function scrollIntoTheView(event) {
-    var $navHeight = $("nav").innerHeight();
+    var $navHeight = !isMobile ? $("nav").innerHeight() : $('.hamburgerContainer').innerHeight();
 
     if (event.target.hash !== "") {
       // Prevent default anchor click behavior
@@ -120,7 +120,7 @@ $(document).ready(function() {
 
       // Store hash
       var targetArticle = event.target.hash,
-        articleExist = $("body").find(targetArticle).lenght > 0,
+        articleExist = $("body").find(targetArticle).length > 0,
         top =
           !isMobile && articleExist
             ? $(targetArticle).offset().top - $navHeight
@@ -128,7 +128,7 @@ $(document).ready(function() {
       $("html, body").animate(
         {
           passive: true,
-          scrollTop: top - navbarHeight
+          scrollTop: top - $navHeight
         },
         100,
         function() {
