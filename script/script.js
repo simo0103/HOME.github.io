@@ -3,6 +3,7 @@ $(document).ready(function() {
     $link = $('a[href*="#"]'),
     CLASS_ACTIVE = "active",
     CLASS_OPEN = "open",
+    CLASS_FADEIN = "fadeIn",
     navbarHeight = 100,
     isMobile =
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -83,10 +84,11 @@ $(document).ready(function() {
         $articleId = $el.attr("id");
 
       if (
-        $(window).scrollTop() + $(window).height() - navbarHeight >
-        $articlePosition
+        $(window).scrollTop() + $(window).height() - navbarHeight > $articlePosition
       ) {
         var $linkClass = $("a." + $articleId);
+        $("article").removeClass(CLASS_FADEIN);
+        $el.addClass(CLASS_FADEIN);
         if (!$linkClass.parent().hasClass(CLASS_ACTIVE)) {
           $link.parent().removeClass(CLASS_ACTIVE);
           $linkClass.parent().addClass(CLASS_ACTIVE);
@@ -121,14 +123,11 @@ $(document).ready(function() {
       // Store hash
       var targetArticle = event.target.hash,
         articleExist = $("body").find(targetArticle).length > 0,
-        top =
-          !isMobile && articleExist
-            ? $(targetArticle).offset().top - $navHeight
-            : $(targetArticle).offset().top;
+        top = $(targetArticle).offset().top - $navHeight
       $("html, body").animate(
         {
           passive: true,
-          scrollTop: top - $navHeight
+          scrollTop: top
         },
         100,
         function() {
