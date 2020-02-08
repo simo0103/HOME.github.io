@@ -237,7 +237,7 @@ main #gallery .gallery {
   main #gallery .gallery img {
     width: 100%;
     padding-bottom: 10px;
-    object-fit: cover; }
+    object-fit: contain; }
     .desktopView main #gallery .gallery img {
       width: 33%;
       padding: 0.3% 0; }
@@ -281,6 +281,10 @@ main #menu {
     overflow: hidden;
     max-height: 60px;
     transition: max-height 0.5s ease-out; }
+    main #menu .menuList > div h3 {
+      font-size: 25px; }
+      .desktopView main #menu .menuList > div h3 {
+        font-size: 30px; }
     main #menu .menuList > div.open {
       max-height: 800px;
       height: auto;
