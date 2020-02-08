@@ -48,21 +48,21 @@ header .hamburgerContainer {
     display: inline-block;
     margin-left: 10px; }
     header .hamburgerContainer .hamburger .line {
-      width: 45px;
-      height: 5px;
+      width: 30px;
+      height: 4px;
       background-color: #ecf0f1;
       display: block;
-      margin: 8px auto;
+      margin: 5px auto;
       -webkit-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
     header .hamburgerContainer .hamburger.active .line:nth-child(2) {
       opacity: 0; }
     header .hamburgerContainer .hamburger.active .line:nth-child(1) {
-      -webkit-transform: translateY(13px) rotate(45deg);
-      -ms-transform: translateY(13px) rotate(45deg);
-      -o-transform: translateY(13px) rotate(45deg);
-      transform: translateY(13px) rotate(45deg); }
+      -webkit-transform: translateY(5px) rotate(45deg);
+      -ms-transform: translateY(5px) rotate(45deg);
+      -o-transform: translateY(5px) rotate(45deg);
+      transform: translateY(5px) rotate(45deg); }
     header .hamburgerContainer .hamburger.active .line:nth-child(3) {
       -webkit-transform: translateY(-13px) rotate(-45deg);
       -ms-transform: translateY(-13px) rotate(-45deg);
@@ -126,7 +126,7 @@ header nav {
         .desktopView header nav ul li.logo {
           width: 18%; }
         .desktopView header nav ul li a {
-          padding: 60px 0; }
+          padding: 47px 0; }
       header nav ul li:hover a {
         color: lightgray; }
       header nav ul li a {
@@ -235,9 +235,9 @@ main #gallery .gallery {
   justify-content: space-between;
   flex-wrap: wrap; }
   main #gallery .gallery img {
-    width: 100%;
+    min-height: 100%;
     padding-bottom: 10px;
-    object-fit: contain; }
+    object-fit: cover; }
     .desktopView main #gallery .gallery img {
       width: 33%;
       padding: 0.3% 0; }
