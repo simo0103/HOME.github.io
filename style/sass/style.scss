@@ -57,6 +57,9 @@ header {
 
     .logo {
       margin-right: 10px;
+      img {
+        padding-top: 5px;
+      }
     }
    
 
@@ -173,7 +176,7 @@ header {
         flex-direction: row;
         height: auto;
         justify-content: center;
-        width: 90%;
+        width: 97%;
         margin: 0 auto;
       }
 
@@ -183,16 +186,19 @@ header {
         cursor: pointer;
         .desktopView & {
           
-          border-bottom: 6px solid transparent;
+          border-bottom: 9px solid transparent;
           &:hover {
-            border-bottom: 6px solid grey;
+            border-bottom: 9px solid grey;
           }
           &.logo,
           &.slider {
             border-bottom: none;
           }
+          &.logo {
+            width: 18%;
+          }
           a {
-            padding: 30px 0;
+            padding: 60px 0;
           }
          
           
@@ -214,7 +220,7 @@ header {
 
           @media (min-width: 1280px) {
 
-            font-size: 20px;
+            font-size: 25px;
           }
         }
         &.logo {
@@ -239,7 +245,7 @@ header {
           .desktopView & {
             display: block;
             position: absolute;
-            padding: 3px;
+            padding: 5px;
             width: 14%;
             background-color: #900a0a;
             left: 0;
@@ -418,6 +424,10 @@ main {
       display: flex;
       justify-content: space-between;
     }
+    .ingredienti {
+      text-transform: capitalize;
+      font-size: 15px;
+    }
     
     .elenco {
       text-align: center;
@@ -427,6 +437,7 @@ main {
       }
       div:not(.piatto) {
         margin-bottom: 10px;
+        padding-right: 20px;
       }
       .desktopView & {
         display: flex;
@@ -660,7 +671,17 @@ main {
           h3,
           p {
             color: white;
-            padding: 20px 10px;
+          
+          }
+          p {
+            padding: 20px 33px;
+
+            font-size: 22px;
+          }
+
+          h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
           }
 
           &.left,

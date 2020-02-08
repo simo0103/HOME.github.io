@@ -42,6 +42,8 @@ header .hamburgerContainer {
     display: none; }
   header .hamburgerContainer .logo {
     margin-right: 10px; }
+    header .hamburgerContainer .logo img {
+      padding-top: 5px; }
   header .hamburgerContainer .hamburger {
     display: inline-block;
     margin-left: 10px; }
@@ -109,20 +111,22 @@ header nav {
       flex-direction: row;
       height: auto;
       justify-content: center;
-      width: 90%;
+      width: 97%;
       margin: 0 auto; }
     header nav ul li {
       width: 16.66%;
       text-align: center;
       cursor: pointer; }
       .desktopView header nav ul li {
-        border-bottom: 6px solid transparent; }
+        border-bottom: 9px solid transparent; }
         .desktopView header nav ul li:hover {
-          border-bottom: 6px solid grey; }
+          border-bottom: 9px solid grey; }
         .desktopView header nav ul li.logo, .desktopView header nav ul li.slider {
           border-bottom: none; }
+        .desktopView header nav ul li.logo {
+          width: 18%; }
         .desktopView header nav ul li a {
-          padding: 30px 0; }
+          padding: 60px 0; }
       header nav ul li:hover a {
         color: lightgray; }
       header nav ul li a {
@@ -133,7 +137,7 @@ header nav {
         width: 100%; }
         @media (min-width: 1280px) {
           header nav ul li a {
-            font-size: 20px; } }
+            font-size: 25px; } }
       header nav ul li.logo {
         display: none; }
         .desktopView header nav ul li.logo {
@@ -150,7 +154,7 @@ header nav {
         .desktopView header nav ul li.slider {
           display: block;
           position: absolute;
-          padding: 3px;
+          padding: 5px;
           width: 14%;
           background-color: #900a0a;
           left: 0;
@@ -256,13 +260,17 @@ main #menu {
   main #menu .titleAndArrowContainer {
     display: flex;
     justify-content: space-between; }
+  main #menu .ingredienti {
+    text-transform: capitalize;
+    font-size: 15px; }
   main #menu .elenco {
     text-align: center; }
     main #menu .elenco h4 {
       margin-bottom: 20px;
       font-size: 23px; }
     main #menu .elenco div:not(.piatto) {
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      padding-right: 20px; }
     .desktopView main #menu .elenco {
       display: flex;
       justify-content: space-between;
@@ -400,8 +408,13 @@ main #galleria .second .middle {
         position: absolute; }
       .desktopView main #galleria .section div h3,
       .desktopView main #galleria .section div p {
-        color: white;
-        padding: 20px 10px; }
+        color: white; }
+      .desktopView main #galleria .section div p {
+        padding: 20px 33px;
+        font-size: 22px; }
+      .desktopView main #galleria .section div h3 {
+        font-size: 30px;
+        margin-bottom: 20px; }
       .desktopView main #galleria .section div.left, .desktopView main #galleria .section div.right {
         position: absolute;
         right: 50%;
