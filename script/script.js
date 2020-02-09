@@ -39,13 +39,13 @@ $(document).ready(function() {
     $("nav").toggleClass(CLASS_OPEN);
   });
 
+/* ------ for menu ------- */
   $(".titleAndArrowContainer").on("click", function(event) {
     $this = $(this);
     $this.toggleClass("selected");
-    // $('.titleAndArrowContainer').hasClass("selected") ? $('.titleAndArrowContainer').removeClass("selected") : "";
-    // $('.titleAndArrowContainer').parent().hasClass('open') ? $('.titleAndArrowContainer').parent().removeClass('open') : "";
     $this.parent().toggleClass(CLASS_OPEN);
   });
+/* ------ end menu ------- */
 
   $(window).scroll(function() {
     var nav = $("nav"),
@@ -54,8 +54,6 @@ $(document).ready(function() {
     ? nav.addClass("sticky")
     : nav.removeClass("sticky");
     
-   
-
     /* ------    section gallery ---- */
     if(!isMobile) {
       $("#galleria .section").each(function() {
@@ -75,9 +73,9 @@ $(document).ready(function() {
           $(this).removeClass("animate");
         }
       });
-
     }
     /* -------------- end gallery    ---------------*/
+
     $("article").each(function() {
       var $el = $(this),
         $articlePosition = $el.offset().top,
@@ -101,8 +99,7 @@ $(document).ready(function() {
         offsetUl = $("nav ul").offset().left,
         slidingBorder = $("nav ul .slider");
 
-      if ($el.hasClass(CLASS_ACTIVE) && !isMobile) {
-        console.log("offset" + $el.offset().left);
+      if (!isMobile && $el.hasClass(CLASS_ACTIVE) ) {
         var distanceFromLeft = $el.offset().left - offsetUl;
         slidingBorder.css("left", distanceFromLeft);
       }
@@ -123,7 +120,8 @@ $(document).ready(function() {
       // Store hash
       var targetArticle = event.target.hash,
         articleExist = $("body").find(targetArticle).length > 0,
-        top = $(targetArticle).offset().top - $navHeight
+        top = $(targetArticle).offset().top - $navHeight;
+    
       $("html, body").animate(
         {
           passive: true,
@@ -154,14 +152,14 @@ $(document).ready(function() {
   //     dots: isMobile ? true : false
   //   });
   // }
-
+  /* ------ menu api ----------- */
   function appendMenu() {
     $.each(menu.pastadisemola, function(key, value) {
       var nomePiatto = value.name,
           $html =
-          "<div class='piatto'><span>" +
+          "<div class='piatto'><p>" +
           nomePiatto +
-          "</span></div> ";
+          "</p></div> ";
       $("#menu .primi .pastadisemola").append($html);
     });
     $.each(menu.pastafresca, function(key, value) {
