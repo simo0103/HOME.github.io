@@ -288,7 +288,7 @@ main #menu {
       .desktopView main #menu .menuList > div h3 {
         font-size: 30px; }
     main #menu .menuList > div.open {
-      max-height: 1000px;
+      max-height: 1080px;
       height: auto;
       transition: max-height 0.5s ease-in; }
       main #menu .menuList > div.open .fas {
@@ -306,8 +306,6 @@ main #menu {
   main #menu .piatto {
     padding-bottom: 10px;
     font-size: 15px; }
-    main #menu .piatto > p {
-      font-weight: bold; }
     .desktopView main #menu .piatto {
       font-size: 20px; }
     main #menu .piatto .dots {

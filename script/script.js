@@ -129,7 +129,7 @@ $(document).ready(function() {
           passive: true,
           scrollTop: top
         },
-        100,
+        200,
         function() {
           //window.location.hash = targetArticle;
         }
