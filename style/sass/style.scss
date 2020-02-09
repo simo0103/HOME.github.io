@@ -306,7 +306,7 @@ main {
     .fa {
       position: absolute;
       font-size: 85px;
-      top: 80%;
+      top: 75%;
       color: #ffffffd1;
       left: 46%;
       transform: translateX(50%);
@@ -315,6 +315,7 @@ main {
 
       .desktopView & {
         left: 50%;
+        top: 80%;
       }
 
       &.bounce {
