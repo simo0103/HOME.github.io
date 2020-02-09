@@ -306,6 +306,8 @@ main #menu {
   main #menu .piatto {
     padding-bottom: 10px;
     font-size: 15px; }
+    main #menu .piatto > p {
+      font-weight: bold; }
     .desktopView main #menu .piatto {
       font-size: 20px; }
     main #menu .piatto .dots {
