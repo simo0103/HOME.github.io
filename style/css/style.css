@@ -288,7 +288,7 @@ main #menu {
       .desktopView main #menu .menuList > div h3 {
         font-size: 30px; }
     main #menu .menuList > div.open {
-      max-height: 800px;
+      max-height: 1000px;
       height: auto;
       transition: max-height 0.5s ease-in; }
       main #menu .menuList > div.open .fas {
