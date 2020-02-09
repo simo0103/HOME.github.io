@@ -237,7 +237,8 @@ main #gallery .gallery {
   main #gallery .gallery img {
     min-height: 100%;
     padding-bottom: 10px;
-    object-fit: cover; }
+    object-fit: cover;
+    width: 49%; }
     .desktopView main #gallery .gallery img {
       width: 33%;
       padding: 0.3% 0; }
