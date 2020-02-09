@@ -121,17 +121,9 @@ $(document).ready(function() {
       var targetArticle = event.target.hash,
         articleExist = $("body").find(targetArticle).length > 0,
         top = $(targetArticle).offset().top - $navHeight;
-    
-      $("html, body").animate(
-        {
-          passive: true,
-          scrollTop: top
-        },
-        200,
-        function() {
-          //window.location.hash = targetArticle;
-        }
-      );
+        document.querySelector(targetArticle).scrollIntoView({
+          behavior: 'smooth'
+        });
     }
   }
 
