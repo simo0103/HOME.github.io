@@ -429,7 +429,7 @@ main {
     }
     .ingredienti {
       text-transform: capitalize;
-      font-size: 15px;
+      font-size: 12px;
     }
     
     .elenco {
@@ -499,9 +499,11 @@ main {
     .piatto {
       padding-bottom: 10px;
       font-size: 15px;
+      text-align: center;
 
       .desktopView & {
         font-size: 20px;
+        text-align: left;
       }
 
       .dots {

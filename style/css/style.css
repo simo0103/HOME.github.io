@@ -269,7 +269,7 @@ main #menu {
     justify-content: space-between; }
   main #menu .ingredienti {
     text-transform: capitalize;
-    font-size: 15px; }
+    font-size: 12px; }
   main #menu .elenco {
     text-align: center; }
     main #menu .elenco h4 {
@@ -310,9 +310,11 @@ main #menu {
       width: 70%; }
   main #menu .piatto {
     padding-bottom: 10px;
-    font-size: 15px; }
+    font-size: 15px;
+    text-align: center; }
     .desktopView main #menu .piatto {
-      font-size: 20px; }
+      font-size: 20px;
+      text-align: left; }
     main #menu .piatto .dots {
       flex: 1;
       border-bottom: 1px dotted black; }
