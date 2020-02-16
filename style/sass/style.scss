@@ -19,7 +19,7 @@ ul {
 h2 {
   text-transform: uppercase;
   text-align: center;
-  padding: 20px 0 40px;
+  padding-bottom: 50px;
   font-size: 40px;
 }
 
@@ -30,6 +30,10 @@ h3 {
   .desktopView {
     font-size: 30px;
   }
+}
+
+article {
+  margin-bottom: 100px;
 }
 
 //-------------------------------//
@@ -746,7 +750,7 @@ main {
     margin-bottom: 50px;
 
     .orari {
-      p {
+      h3 {
         text-transform: uppercase;
         margin-bottom: 20px;
         font-weight: bold;
@@ -766,6 +770,7 @@ main {
       padding-bottom: 10px;
       display: flex;
       justify-content: space-between;
+      font-size: 20px;
 
       span:first-of-type {
         margin-right: 20px;
@@ -904,9 +909,11 @@ footer {
     color: white;
   }
 
-  p {
+  p,
+  a {
     color: white;
     font-size: 20px;
+    display: block;
 
     .desktopView & {
       font-size: 25px;
@@ -926,9 +933,13 @@ footer {
     text-align: center;
     padding: 25px 0;
 
+    &.social {
+      border-top: 2px solid white;
+    }
 
 
-    p {
+    p,
+    a {
       padding: 20px;
     }
 

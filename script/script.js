@@ -5,11 +5,16 @@ $(document).ready(function () {
     CLASS_OPEN = "open",
     CLASS_FADEIN = "fadeIn",
     navbarHeight = 100,
-    isMobile =
+    userAgent = navigator.userAgent.toLowerCase(),
+    isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent),
+    isSmartphone =
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
-    ) == true;
+    ) == true,
+    isMobile = isSmartphone || isTablet;
+
   isMobile ? $body.addClass("mobileView") : $body.addClass("desktopView");
+
   var $hamburgerMenu = $(".hamburger"),
     $sliderContainer = !isMobile ?
     $(".cover .desktopSlider") :

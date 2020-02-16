@@ -16,7 +16,7 @@ ul {
 h2 {
   text-transform: uppercase;
   text-align: center;
-  padding: 20px 0 40px;
+  padding-bottom: 50px;
   font-size: 40px; }
 
 h3 {
@@ -24,6 +24,9 @@ h3 {
   text-transform: uppercase; }
   h3 .desktopView {
     font-size: 30px; }
+
+article {
+  margin-bottom: 100px; }
 
 header .hamburgerContainer {
   background-color: black;
@@ -443,7 +446,7 @@ main #galleria .second .middle {
 
 main #contacts {
   margin-bottom: 50px; }
-  main #contacts .orari p {
+  main #contacts .orari h3 {
     text-transform: uppercase;
     margin-bottom: 20px;
     font-weight: bold; }
@@ -453,7 +456,8 @@ main #contacts {
   main #contacts li {
     padding-bottom: 10px;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    font-size: 20px; }
     main #contacts li span:first-of-type {
       margin-right: 20px; }
   main #contacts .mapContainer {
@@ -539,10 +543,13 @@ footer {
   footer .fab {
     font-size: 40px;
     color: white; }
-  footer p {
+  footer p,
+  footer a {
     color: white;
-    font-size: 20px; }
-    .desktopView footer p {
+    font-size: 20px;
+    display: block; }
+    .desktopView footer p, .desktopView
+    footer a {
       font-size: 25px; }
   footer .privacy {
     font-size: 15px;
@@ -554,7 +561,10 @@ footer {
   footer div {
     text-align: center;
     padding: 25px 0; }
-    footer div p {
+    footer div.social {
+      border-top: 2px solid white; }
+    footer div p,
+    footer div a {
       padding: 20px; }
     footer div .fab {
       padding: 0 10px; }
