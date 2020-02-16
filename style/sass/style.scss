@@ -26,6 +26,7 @@ h2 {
 h3 {
   font-size: 27px;
   text-transform: uppercase;
+
   .desktopView {
     font-size: 30px;
   }
@@ -53,11 +54,12 @@ header {
 
     .logo {
       margin-right: 10px;
+
       img {
         padding-top: 5px;
       }
     }
-   
+
 
     .hamburger {
       display: inline-block;
@@ -127,10 +129,10 @@ header {
       width: 100%;
       top: 0;
 
-        li {
-          display: block;
-        }
-      
+      li {
+        display: block;
+      }
+
 
       &.sticky {
         background-color: black;
@@ -138,20 +140,21 @@ header {
 
         ul {
           position: relative;
+
           li {
             a {
               color: white;
             }
-  
-            
+
+
             &.logo {
               visibility: visible;
             }
-  
+
             &:hover {
               a {
                 color: lightgray;
-  
+
               }
             }
           }
@@ -165,7 +168,7 @@ header {
       display: flex;
       flex-direction: column;
       position: relative;
-      
+
       height: 100vh;
 
       .desktopView & {
@@ -180,24 +183,29 @@ header {
         width: 16.66%;
         text-align: center;
         cursor: pointer;
+
         .desktopView & {
-          
+
           border-bottom: 9px solid transparent;
+
           &:hover {
             border-bottom: 9px solid grey;
           }
+
           &.logo,
           &.slider {
             border-bottom: none;
           }
+
           &.logo {
             width: 18%;
           }
+
           a {
             padding: 40px 0;
           }
-         
-          
+
+
         }
 
         &:hover {
@@ -219,6 +227,7 @@ header {
             font-size: 25px;
           }
         }
+
         &.logo {
           display: none;
 
@@ -226,6 +235,7 @@ header {
             display: block;
             cursor: default;
             position: relative;
+
             img {
               position: absolute;
               top: 50%;
@@ -321,7 +331,7 @@ main {
         transform-origin: center bottom;
         animation-iteration-count: infinite;
         -webkit-animation-iteration-count: infinite;
-        
+
       }
 
       &.animated {
@@ -337,33 +347,22 @@ main {
     width: 95%;
     margin: auto;
 
-    article {
-      padding-top: 60px;
-      .desktopView & {
-        min-height: 100vh;
-        padding: 100px 0 50px 0;
-       
-      }
-    }
+
   }
 
   //introduction
   .introduction {
 
-    padding-top: 60px;
-    .desktopView & {
-      padding-top: 116px;
-    }
     >p {
       text-transform: uppercase;
       text-align: center;
       line-height: 1.5em;
       font-size: 15px;
-      padding: 0px 10px 60px;
+      padding: 60px 10px 60px;
 
       .desktopView & {
         font-size: 25px;
-        padding: 200px 17%;
+        padding: 100px 17%;
         margin: 0
       }
 
@@ -390,6 +389,7 @@ main {
         object-fit: cover;
         width: 49%;
         align-self: center;
+
         .desktopView & {
           width: 33%;
           padding: 0.3% 0;
@@ -427,29 +427,33 @@ main {
       display: flex;
       justify-content: space-between;
     }
+
     .ingredienti {
       text-transform: capitalize;
       font-size: 12px;
     }
-    
+
     .elenco {
       text-align: center;
+
       h4 {
         margin-bottom: 20px;
         font-size: 23px;
       }
+
       div:not(.piatto) {
         margin-bottom: 10px;
         padding-right: 20px;
       }
+
       .desktopView & {
         display: flex;
         justify-content: space-between;
         text-align: left;
-        
+
       }
     }
-  
+
 
     .fas {
       font-size: 20px;
@@ -461,7 +465,8 @@ main {
       transition: max-height 0.5s ease-out;
 
       h3 {
-        font-size: 25px; 
+        font-size: 25px;
+
         .desktopView & {
           font-size: 30px;
         }
@@ -489,7 +494,7 @@ main {
     .menuList {
       >div {
         margin: 0 auto 20px;
-        
+
         .desktopView & {
           width: 70%;
         }
@@ -528,7 +533,7 @@ main {
     h3 {
       text-align: center;
       margin: 0 auto 30px;
-     
+
     }
 
     .barList {
@@ -543,7 +548,7 @@ main {
         font-size: 20px;
         margin-bottom: 10px;
         text-transform: uppercase;
-       
+
 
         &:not(:first-of-type) {
           margin-top: 10px;
@@ -656,9 +661,11 @@ main {
         div {
           width: 33.33%;
           margin: 0 auto;
+
           @media only screen and (max-width: 1280px) {
             height: 35vh;
           }
+
           height: 60vh;
 
           .content,
@@ -683,8 +690,9 @@ main {
           h3,
           p {
             color: white;
-          
+
           }
+
           p {
             padding: 20px 33px;
 
@@ -777,41 +785,13 @@ main {
 
   //----------------- EVENTI ----------------------//
 
-  // #eventi {
-  //   text-align: center;
-  //   background-color: black;
-  //   color: white;
-  //   padding-bottom: 40px;
-
-  //   div {
-  //     display: flex;
-  //     flex-wrap: wrap;
-
-  //     .data {
-  //       margin-bottom: 10px;
-  //       display: inline-block;
-  //       border-bottom: 1px solid white;
-  //       font-size: 20px;
-  //     }
-
-  //     ul {
-  //       margin-bottom: 20px;
-  //       width: 33%;
-
-  //       li {
-  //         padding: 8px 0;
-  //         display: flex;
-  //         flex-direction: column;
-
-  //         .squadre {
-  //           text-transform: uppercase;
-  //           font-size: 25px;
-  //           padding: 10px 0;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+  #eventi.noEvents {
+    p {
+      padding: 50px 0;
+      font-size: 20px;
+      text-align: center;
+    }
+  }
 
   #eventi .wrapper {
 
@@ -915,20 +895,19 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    .desktopView & {
-      flex-direction: row;
-      width: 90%;
-      margin: 0 auto;
-    }
-
   }
 
   .fas,
   .far,
-  .fab,
+  .fab {
+    font-size: 40px;
+    color: white;
+  }
+
   p {
     color: white;
     font-size: 20px;
+
     .desktopView & {
       font-size: 25px;
     }

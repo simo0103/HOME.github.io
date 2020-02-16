@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var $body = $("body"),
     $link = $('a[href*="#"]'),
     CLASS_ACTIVE = "active",
@@ -6,16 +6,16 @@ $(document).ready(function() {
     CLASS_FADEIN = "fadeIn",
     navbarHeight = 100,
     isMobile =
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      ) == true;
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) == true;
   isMobile ? $body.addClass("mobileView") : $body.addClass("desktopView");
   var $hamburgerMenu = $(".hamburger"),
-    $sliderContainer = !isMobile
-      ? $(".cover .desktopSlider")
-      : $(".cover .mobileSlider");
+    $sliderContainer = !isMobile ?
+    $(".cover .desktopSlider") :
+    $(".cover .mobileSlider");
 
-  $link.on("click", function(event) {
+  $link.on("click", function (event) {
     $this = $(this);
     toggleClassActive($this);
     scrollIntoTheView(event);
@@ -34,36 +34,36 @@ $(document).ready(function() {
     autoplaySpeed: 10000,
   });
 
-  $hamburgerMenu.on("click", function(e) {
+  $hamburgerMenu.on("click", function (e) {
     $(this).toggleClass(CLASS_ACTIVE);
     $("nav").toggleClass(CLASS_OPEN);
   });
 
-/* ------ for menu ------- */
-  $(".titleAndArrowContainer").on("click", function(event) {
+  /* ------ for menu ------- */
+  $(".titleAndArrowContainer").on("click", function (event) {
     $this = $(this);
     $this.toggleClass("selected");
     $this.parent().toggleClass(CLASS_OPEN);
   });
-/* ------ end menu ------- */
+  /* ------ end menu ------- */
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     var nav = $("nav"),
-    scroll = $(window).scrollTop();
-  !isMobile && scroll >= $(".coverContainer").height() - nav.height()
-    ? nav.addClass("sticky")
-    : nav.removeClass("sticky");
-    
+      scroll = $(window).scrollTop();
+    !isMobile && scroll >= $(".coverContainer").height() - nav.height() ?
+      nav.addClass("sticky") :
+      nav.removeClass("sticky");
+
     /* ------    section gallery ---- */
-    if(!isMobile) {
-      $("#galleria .section").each(function() {
+    if (!isMobile) {
+      $("#galleria .section").each(function () {
         var $elementPos = $(this).offset().top,
           $scrollPos = $(window).scrollTop();
-  
+
         var $sectionH = $(this).height();
         var $h = $(window).height();
         var $sectionVert = $h / 2 - $sectionH / 4;
-  
+
         if (
           $elementPos - $sectionVert - navbarHeight * 2 <= $scrollPos &&
           $elementPos - $sectionVert - navbarHeight * 2 + $sectionH > $scrollPos
@@ -76,7 +76,7 @@ $(document).ready(function() {
     }
     /* -------------- end gallery    ---------------*/
 
-    $("article").each(function() {
+    $("article").each(function () {
       var $el = $(this),
         $articlePosition = $el.offset().top,
         $articleId = $el.attr("id");
@@ -94,12 +94,12 @@ $(document).ready(function() {
       }
     });
 
-    $link.parent().each(function() {
+    $link.parent().each(function () {
       var $el = $(this),
         offsetUl = $("nav ul").offset().left,
         slidingBorder = $("nav ul .slider");
 
-      if (!isMobile && $el.hasClass(CLASS_ACTIVE) ) {
+      if (!isMobile && $el.hasClass(CLASS_ACTIVE)) {
         var distanceFromLeft = $el.offset().left - offsetUl;
         slidingBorder.css("left", distanceFromLeft);
       }
@@ -121,9 +121,9 @@ $(document).ready(function() {
       var targetArticle = event.target.hash,
         articleExist = $("body").find(targetArticle).length > 0,
         top = $(targetArticle).offset().top - $navHeight;
-        document.querySelector(targetArticle).scrollIntoView({
-          behavior: 'smooth'
-        });
+      $('html, body').animate({
+        scrollTop: top
+      }, 500);
     }
   }
 
@@ -146,122 +146,122 @@ $(document).ready(function() {
   // }
   /* ------ menu api ----------- */
   function appendMenu() {
-    $.each(menu.pastadisemola, function(key, value) {
-      var nomePiatto = value.name,
-          $html =
-          "<div class='piatto'><p>" +
-          nomePiatto +
-          "</p></div> ";
-      $("#menu .primi .pastadisemola").append($html);
-    });
-    $.each(menu.pastafresca, function(key, value) {
-      var nomePiatto = value.name,
-          $html =
-          "<div class='piatto'><p>" +
-          nomePiatto +
-          "</p></div> ";
-      $("#menu .primi .pastafresca").append($html);
-    });
-    $.each(menu.secondi, function(key, value) {
+    $.each(menu.pastadisemola, function (key, value) {
       var nomePiatto = value.name,
         $html =
-          "<div class='piatto'><p>" +
-          nomePiatto +
-          "</p></div> ";
+        "<div class='piatto'><p>" +
+        nomePiatto +
+        "</p></div> ";
+      $("#menu .primi .pastadisemola").append($html);
+    });
+    $.each(menu.pastafresca, function (key, value) {
+      var nomePiatto = value.name,
+        $html =
+        "<div class='piatto'><p>" +
+        nomePiatto +
+        "</p></div> ";
+      $("#menu .primi .pastafresca").append($html);
+    });
+    $.each(menu.secondi, function (key, value) {
+      var nomePiatto = value.name,
+        $html =
+        "<div class='piatto'><p>" +
+        nomePiatto +
+        "</p></div> ";
       $("#menu .elenco .secondi").append($html);
     });
 
-    $.each(menu.piattifreddi, function(key, value) {
+    $.each(menu.piattifreddi, function (key, value) {
       var nomePiatto = value.name,
         $html =
-          "<div class='piatto'><p>" +
-          nomePiatto +
-          "</p></div> ";
+        "<div class='piatto'><p>" +
+        nomePiatto +
+        "</p></div> ";
       $("#menu .piattifreddi").append($html);
     });
 
-    $.each(menu.contorni, function(key, value) {
+    $.each(menu.contorni, function (key, value) {
       var nomePiatto = value.name,
-       $html =
-          "<div class='piatto'><p>" +
-          nomePiatto +
-          "</p></div> ";
+        $html =
+        "<div class='piatto'><p>" +
+        nomePiatto +
+        "</p></div> ";
       $("#menu .contorni").append($html);
     });
 
-    $.each(menu.hamburger, function(key, value) {
+    $.each(menu.hamburger, function (key, value) {
       var nomePiatto = value.name,
         ingredienti = value.ingredienti,
         $html =
-          "<div class='piatto'><p>" +
-          nomePiatto +
-          "</p><span class='ingredienti'>" +
-          ingredienti +
-          "</span></div> ";
+        "<div class='piatto'><p>" +
+        nomePiatto +
+        "</p><span class='ingredienti'>" +
+        ingredienti +
+        "</span></div> ";
       $("#menu .elenco .hamburger").append($html);
     });
 
-    $.each(menu.panini, function(key, value) {
+    $.each(menu.panini, function (key, value) {
       var nomePiatto = value.name,
         ingredienti = value.ingredienti,
         $html =
-          "<div class='piatto'><p>" +
-          nomePiatto +
-          "</p><span class='ingredienti'>" +
-          ingredienti +
-          "</span></div> ";
+        "<div class='piatto'><p>" +
+        nomePiatto +
+        "</p><span class='ingredienti'>" +
+        ingredienti +
+        "</span></div> ";
       $("#menu .elenco .panini").append($html);
     });
 
-    $.each(bar.birreSpina, function(key, value) {
+    $.each(bar.birreSpina, function (key, value) {
       var nomeBirra = value.name,
         categoria = value.categoria,
         vol = value.vol,
         categoryElement =
-          categoria != ""
-            ? "<div class='categoria'>" + categoria + "</div>"
-            : "",
+        categoria != "" ?
+        "<div class='categoria'>" + categoria + "</div>" :
+        "",
         $html =
-          categoryElement +
-          "<div class='birra'><div class='container'><span>" +
-          nomeBirra +
-          "</span><span class='dots'></span><span>" +
-          vol +
-          " %</span></div></div>";
+        categoryElement +
+        "<div class='birra'><div class='container'><span>" +
+        nomeBirra +
+        "</span><span class='dots'></span><span>" +
+        vol +
+        " %</span></div></div>";
       $("#bar .birre").append($html);
     });
-    $.each(bar.birreBottiglia, function(key, value) {
+    $.each(bar.birreBottiglia, function (key, value) {
       var nomeBirra = value.name,
         categoria = value.categoria,
         vol = value.vol,
         categoryElement =
-          categoria != ""
-            ? "<div class='categoria'>" + categoria + "</div>"
-            : "",
+        categoria != "" ?
+        "<div class='categoria'>" + categoria + "</div>" :
+        "",
         $html =
-          categoryElement +
-          "<div class='birraBottiglia'><div class='container'><span>" +
-          nomeBirra +
-          "</span><span class='dots'></span> <span>" +
-          vol +
-          " %</span></div></div>";
+        categoryElement +
+        "<div class='birraBottiglia'><div class='container'><span>" +
+        nomeBirra +
+        "</span><span class='dots'></span> <span>" +
+        vol +
+        " %</span></div></div>";
       $("#bar .birreInBottiglia").append($html);
     });
-    $.each(bar.vini, function(key, value) {
+    $.each(bar.vini, function (key, value) {
       var nome = value.name,
         categoria = value.categoria,
         descr = value.descr,
         categoryElement =
-          categoria != ""
-            ? "<div class='categoria'>" + categoria + "</div>"
-            : "",
+        categoria != "" ?
+        "<div class='categoria'>" + categoria + "</div>" :
+        "",
         $html =
-          categoryElement +
-          "<div class='listaVini'><div class='containerVini'><span>" +
-          nome +
-          "</span> <span class='descr'>" +
-          descr +
-          "</span></div></div>";
+        categoryElement +
+        "<div class='listaVini'><div class='containerVini'><span>" +
+        nome +
+        "</span> <span class='descr'>" +
+        descr +
+        "</span></div></div>";
       $("#bar .vini").append($html);
     });
     // $.each(bar.bibite, function(key, value) {

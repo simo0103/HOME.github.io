@@ -208,26 +208,17 @@ main .cover {
 main .site-content {
   width: 95%;
   margin: auto; }
-  main .site-content article {
-    padding-top: 60px; }
-    .desktopView main .site-content article {
-      min-height: 100vh;
-      padding: 100px 0 50px 0; }
 
-main .introduction {
-  padding-top: 60px; }
-  .desktopView main .introduction {
-    padding-top: 116px; }
-  main .introduction > p {
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.5em;
-    font-size: 15px;
-    padding: 0px 10px 60px; }
-    .desktopView main .introduction > p {
-      font-size: 25px;
-      padding: 200px 17%;
-      margin: 0; }
+main .introduction > p {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 15px;
+  padding: 60px 10px 60px; }
+  .desktopView main .introduction > p {
+    font-size: 25px;
+    padding: 100px 17%;
+    margin: 0; }
 
 main #gallery h3 {
   text-align: center;
@@ -471,6 +462,11 @@ main #contacts {
     .desktopView main #contacts .mapContainer {
       width: 70%; }
 
+main #eventi.noEvents p {
+  padding: 50px 0;
+  font-size: 20px;
+  text-align: center; }
+
 main #eventi .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -538,20 +534,15 @@ footer {
     justify-content: space-around;
     flex-direction: column;
     align-items: center; }
-    .desktopView footer .contattiContainer {
-      flex-direction: row;
-      width: 90%;
-      margin: 0 auto; }
   footer .fas,
   footer .far,
-  footer .fab,
+  footer .fab {
+    font-size: 40px;
+    color: white; }
   footer p {
     color: white;
     font-size: 20px; }
-    .desktopView footer .fas, .desktopView
-    footer .far, .desktopView
-    footer .fab, .desktopView
-    footer p {
+    .desktopView footer p {
       font-size: 25px; }
   footer .privacy {
     font-size: 15px;
