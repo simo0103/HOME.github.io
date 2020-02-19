@@ -8,10 +8,10 @@ $(document).ready(function () {
     userAgent = navigator.userAgent.toLowerCase(),
     isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent),
     isSmartphone =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     ) == true,
-    isMobile = isSmartphone || isTablet;
+    isMobile = isSmartphone;
 
   isMobile ? $body.addClass("mobileView") : $body.addClass("desktopView");
 
