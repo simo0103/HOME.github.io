@@ -63,6 +63,7 @@ header {
 
       img {
         padding-top: 5px;
+        width: 75px;
       }
     }
 
@@ -140,6 +141,15 @@ header {
         display: block;
       }
 
+      .logo img {
+
+        width: 100px;
+
+        @media only screen and (min-width : 1025px) {
+          width: 150px;
+        }
+      }
+
 
       &.sticky {
         background-color: black;
@@ -209,6 +219,13 @@ header {
           }
 
           a {
+            @media only screen and (max-width : 1024px) {
+
+              padding: 25px 0;
+              font-size: 14px;
+
+            }
+
             padding: 40px 0;
           }
 
@@ -274,12 +291,6 @@ header {
   }
 }
 
-@media only screen and (max-width : 1024px) {
-  header nav ul li {
-    padding: 23px 0;
-    font-size: 14px;
-  }
-}
 
 main {
   .cover {

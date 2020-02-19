@@ -43,7 +43,8 @@ header .hamburgerContainer {
   header .hamburgerContainer .logo {
     margin-right: 10px; }
     header .hamburgerContainer .logo img {
-      padding-top: 5px; }
+      padding-top: 5px;
+      width: 75px; }
   header .hamburgerContainer .hamburger {
     display: inline-block;
     margin-left: 10px; }
@@ -91,6 +92,11 @@ header nav {
     top: 0; }
     .desktopView header nav li {
       display: block; }
+    .desktopView header nav .logo img {
+      width: 100px; }
+      @media only screen and (min-width: 1025px) {
+        .desktopView header nav .logo img {
+          width: 150px; } }
     .desktopView header nav.sticky {
       background-color: black;
       box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.75); }
@@ -127,6 +133,10 @@ header nav {
           width: 18%; }
         .desktopView header nav ul li a {
           padding: 40px 0; }
+          @media only screen and (max-width: 1024px) {
+            .desktopView header nav ul li a {
+              padding: 25px 0;
+              font-size: 14px; } }
       header nav ul li:hover a {
         color: lightgray; }
       header nav ul li a {
@@ -160,11 +170,6 @@ header nav {
           left: 0;
           bottom: 0;
           transition: left 0.2s linear; }
-
-@media only screen and (max-width: 1024px) {
-  header nav ul li {
-    padding: 23px 0;
-    font-size: 14px; } }
 
 main .cover {
   width: 100%;
