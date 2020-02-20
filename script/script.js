@@ -5,13 +5,10 @@ $(document).ready(function () {
     CLASS_OPEN = "open",
     CLASS_FADEIN = "fadeIn",
     navbarHeight = 100,
-    userAgent = navigator.userAgent.toLowerCase(),
-    isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent),
-    isSmartphone =
-    /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    ) == true,
-    isMobile = isSmartphone;
+    userAgent = userAgent = navigator.userAgent || navigator.vendor || window.opera,
+    isSmartphone = userAgent.match('/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i') || window.matchMedia('(max-width: 1024px)').matches,
+    isTablet = userAgent.match(/iPad/i) || window.matchMedia('(max-width: 1024px)').matches,
+    isMobile = isSmartphone || isTablet;
 
   isMobile ? $body.addClass("mobileView") : $body.addClass("desktopView");
 
