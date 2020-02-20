@@ -306,20 +306,6 @@ main {
       height: 100vh;
     }
 
-    .desktopSlider {
-      display: none;
-    }
-
-    .desktopView & {
-      .mobileSlider {
-        display: none;
-      }
-
-      .desktopSlider {
-        display: block;
-      }
-    }
-
     .fa {
       position: absolute;
       font-size: 85px;

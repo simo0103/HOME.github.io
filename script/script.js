@@ -13,9 +13,7 @@ $(document).ready(function () {
   isMobile ? $body.addClass("mobileView") : $body.addClass("desktopView");
 
   var $hamburgerMenu = $(".hamburger"),
-    $sliderContainer = !isMobile ?
-    $(".cover .desktopSlider") :
-    $(".cover .mobileSlider");
+    $sliderContainer = $(".cover .coverSlider");
 
   $link.on("click", function (event) {
     $this = $(this);

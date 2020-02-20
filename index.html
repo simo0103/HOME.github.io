@@ -52,22 +52,25 @@
     <main>
         <article id="home" class="cover">
             <div class="coverContainer">
-                <div class="desktopSlider">
+                <div class="coverSlider">
                     <div>
-                        <img src="./style/images/desktop/bar.jpg" alt="banner" />
+                        <picture>
+                            <source srcset="./style/images/desktop/bar.jpg" media="(min-width: 736px)">
+                            <img src="./style/images/mobile/bar.jpg" />
+                        </picture>
                     </div>
                     <div>
-                        <img src="./style/images/desktop/bulldog2.jpg" alt="banner" />
+                        <picture>
+                            <source srcset="./style/images/desktop/bulldog2.jpg" media="(min-width: 736px)">
+                            <img src="./style/images/mobile/bulldog2.jpg" />
+                        </picture>
                     </div>
                     <div>
-                        <img src="./style/images/desktop/sala2.jpg" alt="banner" />
+                        <picture>
+                            <source srcset="./style/images/desktop/sala2.jpg" media="(min-width: 736px)">
+                            <img src="./style/images/mobile/sala2.jpg" />
+                        </picture>
                     </div>
-
-                </div>
-                <div class="mobileSlider">
-                    <div><img src="./style/images/mobile/bar.jpg" alt="banner-bar" /></div>
-                    <div><img src="./style/images/mobile/bulldog.jpg" alt="banner" /></div>
-                    <div><img src="./style/images/mobile/bar2.jpg" alt="banner-bar" /></div>
 
                 </div>
                 <a class="fa fa-angle-down animated bounce" href="#introduction"></a>
@@ -84,7 +87,7 @@
                     <div class="first section">
                         <div class="middle">
                             <picture>
-                                <source srcset="style/images/desktop/tagliatelle.jpg" media="(min-width: 800px)">
+                                <source srcset="style/images/desktop/tagliatelle.jpg" media="(min-width: 736px)">
                                 <img src="style/images/mobile/tagliatelle.jpg" />
                             </picture>
                         </div>

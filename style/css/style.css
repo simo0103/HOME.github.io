@@ -178,12 +178,6 @@ main .cover {
     max-height: 100%;
     object-fit: cover;
     height: 100vh; }
-  main .cover .desktopSlider {
-    display: none; }
-  .desktopView main .cover .mobileSlider {
-    display: none; }
-  .desktopView main .cover .desktopSlider {
-    display: block; }
   main .cover .fa {
     position: absolute;
     font-size: 85px;
