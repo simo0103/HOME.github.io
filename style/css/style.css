@@ -411,9 +411,6 @@ main #galleria .second .middle {
       width: 33.33%;
       margin: 0 auto;
       height: 60vh; }
-      @media only screen and (max-width: 1280px) {
-        .desktopView main #galleria .section div {
-          height: 45vh; } }
       .desktopView main #galleria .section div .content,
       .desktopView main #galleria .section div .overlay {
         width: 100%;
@@ -433,7 +430,10 @@ main #galleria .second .middle {
       .desktopView main #galleria .section div p {
         padding: 10% 16%;
         font-size: 22px;
-        line-height: 2em; }
+        line-height: 1em; }
+        @media only screen and (min-width: 1280px) {
+          .desktopView main #galleria .section div p {
+            line-height: 2em; } }
       .desktopView main #galleria .section div h3 {
         font-size: 30px;
         margin-bottom: 20px; }
