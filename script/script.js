@@ -37,6 +37,7 @@ $(document).ready(function () {
   $hamburgerMenu.on("click", function (e) {
     $(this).toggleClass(CLASS_ACTIVE);
     $("nav").toggleClass(CLASS_OPEN);
+    $('body').toggleClass('overflowHidden');
   });
 
   /* ------ for menu ------- */
@@ -149,43 +150,43 @@ $(document).ready(function () {
     $.each(menu.pastadisemola, function (key, value) {
       var nomePiatto = value.name,
         $html =
-        "<div class='piatto'><p>" +
-        nomePiatto +
-        "</p></div> ";
+          "<div class='piatto'><p>" +
+          nomePiatto +
+          "</p></div> ";
       $("#menu .primi .pastadisemola").append($html);
     });
     $.each(menu.pastafresca, function (key, value) {
       var nomePiatto = value.name,
         $html =
-        "<div class='piatto'><p>" +
-        nomePiatto +
-        "</p></div> ";
+          "<div class='piatto'><p>" +
+          nomePiatto +
+          "</p></div> ";
       $("#menu .primi .pastafresca").append($html);
     });
     $.each(menu.secondi, function (key, value) {
       var nomePiatto = value.name,
         $html =
-        "<div class='piatto'><p>" +
-        nomePiatto +
-        "</p></div> ";
+          "<div class='piatto'><p>" +
+          nomePiatto +
+          "</p></div> ";
       $("#menu .elenco .secondi").append($html);
     });
 
     $.each(menu.piattifreddi, function (key, value) {
       var nomePiatto = value.name,
         $html =
-        "<div class='piatto'><p>" +
-        nomePiatto +
-        "</p></div> ";
+          "<div class='piatto'><p>" +
+          nomePiatto +
+          "</p></div> ";
       $("#menu .piattifreddi").append($html);
     });
 
     $.each(menu.contorni, function (key, value) {
       var nomePiatto = value.name,
         $html =
-        "<div class='piatto'><p>" +
-        nomePiatto +
-        "</p></div> ";
+          "<div class='piatto'><p>" +
+          nomePiatto +
+          "</p></div> ";
       $("#menu .contorni").append($html);
     });
 
@@ -193,11 +194,11 @@ $(document).ready(function () {
       var nomePiatto = value.name,
         ingredienti = value.ingredienti,
         $html =
-        "<div class='piatto'><p>" +
-        nomePiatto +
-        "</p><span class='ingredienti'>" +
-        ingredienti +
-        "</span></div> ";
+          "<div class='piatto'><p>" +
+          nomePiatto +
+          "</p><span class='ingredienti'>" +
+          ingredienti +
+          "</span></div> ";
       $("#menu .elenco .hamburger").append($html);
     });
 
@@ -205,11 +206,11 @@ $(document).ready(function () {
       var nomePiatto = value.name,
         ingredienti = value.ingredienti,
         $html =
-        "<div class='piatto'><p>" +
-        nomePiatto +
-        "</p><span class='ingredienti'>" +
-        ingredienti +
-        "</span></div> ";
+          "<div class='piatto'><p>" +
+          nomePiatto +
+          "</p><span class='ingredienti'>" +
+          ingredienti +
+          "</span></div> ";
       $("#menu .elenco .panini").append($html);
     });
 
@@ -218,16 +219,16 @@ $(document).ready(function () {
         categoria = value.categoria,
         vol = value.vol,
         categoryElement =
-        categoria != "" ?
-        "<div class='categoria'>" + categoria + "</div>" :
-        "",
+          categoria != "" ?
+            "<div class='categoria'>" + categoria + "</div>" :
+            "",
         $html =
-        categoryElement +
-        "<div class='birra'><div class='container'><span>" +
-        nomeBirra +
-        "</span><span class='dots'></span><span>" +
-        vol +
-        " %</span></div></div>";
+          categoryElement +
+          "<div class='birra'><div class='container'><span>" +
+          nomeBirra +
+          "</span><span class='dots'></span><span>" +
+          vol +
+          " %</span></div></div>";
       $("#bar .birre").append($html);
     });
     $.each(bar.birreBottiglia, function (key, value) {
@@ -235,16 +236,16 @@ $(document).ready(function () {
         categoria = value.categoria,
         vol = value.vol,
         categoryElement =
-        categoria != "" ?
-        "<div class='categoria'>" + categoria + "</div>" :
-        "",
+          categoria != "" ?
+            "<div class='categoria'>" + categoria + "</div>" :
+            "",
         $html =
-        categoryElement +
-        "<div class='birraBottiglia'><div class='container'><span>" +
-        nomeBirra +
-        "</span><span class='dots'></span> <span>" +
-        vol +
-        " %</span></div></div>";
+          categoryElement +
+          "<div class='birraBottiglia'><div class='container'><span>" +
+          nomeBirra +
+          "</span><span class='dots'></span> <span>" +
+          vol +
+          " %</span></div></div>";
       $("#bar .birreInBottiglia").append($html);
     });
     $.each(bar.vini, function (key, value) {
@@ -252,16 +253,16 @@ $(document).ready(function () {
         categoria = value.categoria,
         descr = value.descr,
         categoryElement =
-        categoria != "" ?
-        "<div class='categoria'>" + categoria + "</div>" :
-        "",
+          categoria != "" ?
+            "<div class='categoria'>" + categoria + "</div>" :
+            "",
         $html =
-        categoryElement +
-        "<div class='listaVini'><div class='containerVini'><span>" +
-        nome +
-        "</span> <span class='descr'>" +
-        descr +
-        "</span></div></div>";
+          categoryElement +
+          "<div class='listaVini'><div class='containerVini'><span>" +
+          nome +
+          "</span> <span class='descr'>" +
+          descr +
+          "</span></div></div>";
       $("#bar .vini").append($html);
     });
     // $.each(bar.bibite, function(key, value) {

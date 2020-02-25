@@ -36,6 +36,13 @@ article {
   margin-bottom: 100px;
 }
 
+body.mobileView {
+  &.overflowHidden {
+    overflow: hidden;
+  }
+}
+
+
 //-------------------------------//
 
 //HEADER
@@ -46,6 +53,10 @@ header {
     position: fixed;
     width: 100vw;
     top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 0 10px;
     display: flex;
     height: 60px;
     align-items: center;
@@ -57,7 +68,6 @@ header {
     }
 
     .logo {
-      margin-right: 10px;
 
       img {
         padding-top: 5px;
@@ -68,7 +78,6 @@ header {
 
     .hamburger {
       display: inline-block;
-      margin-left: 10px;
 
       .line {
         width: 30px;
@@ -107,11 +116,13 @@ header {
   }
 
   nav {
-    background-color: #000000d1;
+    background-color: #000000ed;
     transition: width 0.5s ease;
     width: 0;
     top: 60px;
-    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    right: 0;
     z-index: 2000;
     position: fixed;
     height: auto;
@@ -125,8 +136,12 @@ header {
 
       li {
         display: block;
-        padding: 30px 0;
+        padding-bottom: 25px;
         width: 100%;
+
+        &:first-of-type {
+          padding-top: 25px;
+        }
 
         a {
           font-size: 20px;
@@ -178,7 +193,6 @@ header {
       display: flex;
       flex-direction: column;
       position: relative;
-
       height: 100vh;
 
       .desktopView & {
@@ -308,20 +322,23 @@ main {
       height: 100vh;
     }
 
-    .fa {
+    .angleOverlay {
+      width: 100%;
+      height: 86%;
       position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .fa {
       font-size: 85px;
-      top: 75%;
       color: #ffffffd1;
-      left: 46%;
-      transform: translateX(50%);
+
       display: inline-block;
       cursor: pointer;
-
-      .desktopView & {
-        left: 50%;
-        top: 80%;
-      }
 
       &.bounce {
         -webkit-animation-name: bounce;
@@ -356,13 +373,15 @@ main {
       text-transform: uppercase;
       text-align: center;
       line-height: 1.5em;
-      font-size: 15px;
+      font-size: 20px;
       padding: 60px 10px 60px;
+      font-weight: bold;
 
       .desktopView & {
-        font-size: 25px;
+        font-size: 30px;
         padding: 100px 17%;
-        margin: 0
+        margin: 0;
+        font-weight: bold;
       }
 
     }
@@ -429,7 +448,8 @@ main {
 
     .ingredienti {
       text-transform: capitalize;
-      font-size: 12px;
+      font-size: 14px;
+      color: grey;
     }
 
     .elenco {
@@ -502,8 +522,9 @@ main {
 
     .piatto {
       padding-bottom: 10px;
-      font-size: 15px;
+      font-size: 17px;
       text-align: center;
+      text-transform: capitalize;
 
       .desktopView & {
         font-size: 20px;
@@ -547,7 +568,8 @@ main {
         font-size: 20px;
         margin-bottom: 10px;
         text-transform: uppercase;
-
+        display: inline-block;
+        border-bottom: 1px solid black;
 
         &:not(:first-of-type) {
           margin-top: 10px;
@@ -662,7 +684,7 @@ main {
           margin: 0 auto;
 
           @media only screen and (max-width: 1280px) {
-            height: 35vh;
+            height: 45vh;
           }
 
           height: 60vh;
@@ -693,9 +715,9 @@ main {
           }
 
           p {
-            padding: 20px 33px;
-
+            padding: 10% 16%;
             font-size: 22px;
+            line-height: 2em;
           }
 
           h3 {
@@ -785,11 +807,30 @@ main {
 
   //----------------- EVENTI ----------------------//
 
-  #eventi.noEvents {
+  #eventi {
+    text-align: center;
+    font-size: 25px;
+
     p {
-      padding: 50px 0;
-      font-size: 20px;
-      text-align: center;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+
+    ul li {
+      padding: 10px 0;
+      text-decoration: underline;
+    }
+
+    .details {
+      font-size: 15px;
+    }
+
+    &.noEvents {
+      p {
+        padding: 50px 0;
+        font-size: 20px;
+        text-align: center;
+      }
     }
   }
 

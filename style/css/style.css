@@ -28,11 +28,18 @@ h3 {
 article {
   margin-bottom: 100px; }
 
+body.mobileView.overflowHidden {
+  overflow: hidden; }
+
 header .hamburgerContainer {
   background-color: black;
   position: fixed;
   width: 100vw;
   top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 0 10px;
   display: flex;
   height: 60px;
   align-items: center;
@@ -40,14 +47,11 @@ header .hamburgerContainer {
   justify-content: space-between; }
   .desktopView header .hamburgerContainer {
     display: none; }
-  header .hamburgerContainer .logo {
-    margin-right: 10px; }
-    header .hamburgerContainer .logo img {
-      padding-top: 5px;
-      width: 75px; }
+  header .hamburgerContainer .logo img {
+    padding-top: 5px;
+    width: 75px; }
   header .hamburgerContainer .hamburger {
-    display: inline-block;
-    margin-left: 10px; }
+    display: inline-block; }
     header .hamburgerContainer .hamburger .line {
       width: 30px;
       height: 4px;
@@ -71,11 +75,13 @@ header .hamburgerContainer {
       transform: translateY(-13px) rotate(-45deg); }
 
 header nav {
-  background-color: #000000d1;
+  background-color: #000000ed;
   transition: width 0.5s ease;
   width: 0;
   top: 60px;
-  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  right: 0;
   z-index: 2000;
   position: fixed;
   height: auto; }
@@ -85,8 +91,10 @@ header nav {
     width: 100%; }
     header nav.open li {
       display: block;
-      padding: 30px 0;
+      padding-bottom: 25px;
       width: 100%; }
+      header nav.open li:first-of-type {
+        padding-top: 25px; }
       header nav.open li a {
         font-size: 20px;
         font-weight: bold; }
@@ -181,18 +189,20 @@ main .cover {
     max-height: 100%;
     object-fit: cover;
     height: 100vh; }
-  main .cover .fa {
+  main .cover .angleOverlay {
+    width: 100%;
+    height: 86%;
     position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; }
+  main .cover .fa {
     font-size: 85px;
-    top: 75%;
     color: #ffffffd1;
-    left: 46%;
-    transform: translateX(50%);
     display: inline-block;
     cursor: pointer; }
-    .desktopView main .cover .fa {
-      left: 50%;
-      top: 80%; }
     main .cover .fa.bounce {
       -webkit-animation-name: bounce;
       animation-name: bounce;
@@ -214,12 +224,14 @@ main .introduction > p {
   text-transform: uppercase;
   text-align: center;
   line-height: 1.5em;
-  font-size: 15px;
-  padding: 60px 10px 60px; }
+  font-size: 20px;
+  padding: 60px 10px 60px;
+  font-weight: bold; }
   .desktopView main .introduction > p {
-    font-size: 25px;
+    font-size: 30px;
     padding: 100px 17%;
-    margin: 0; }
+    margin: 0;
+    font-weight: bold; }
 
 main #gallery h3 {
   text-align: center;
@@ -261,7 +273,8 @@ main #menu {
     justify-content: space-between; }
   main #menu .ingredienti {
     text-transform: capitalize;
-    font-size: 12px; }
+    font-size: 14px;
+    color: grey; }
   main #menu .elenco {
     text-align: center; }
     main #menu .elenco h4 {
@@ -302,8 +315,9 @@ main #menu {
       width: 70%; }
   main #menu .piatto {
     padding-bottom: 10px;
-    font-size: 15px;
-    text-align: center; }
+    font-size: 17px;
+    text-align: center;
+    text-transform: capitalize; }
     .desktopView main #menu .piatto {
       font-size: 20px;
       text-align: left; }
@@ -329,7 +343,9 @@ main #bar .barList {
   main #bar .barList .categoria {
     font-size: 20px;
     margin-bottom: 10px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 1px solid black; }
     main #bar .barList .categoria:not(:first-of-type) {
       margin-top: 10px; }
   main #bar .barList > div {
@@ -397,7 +413,7 @@ main #galleria .second .middle {
       height: 60vh; }
       @media only screen and (max-width: 1280px) {
         .desktopView main #galleria .section div {
-          height: 35vh; } }
+          height: 45vh; } }
       .desktopView main #galleria .section div .content,
       .desktopView main #galleria .section div .overlay {
         width: 100%;
@@ -415,8 +431,9 @@ main #galleria .second .middle {
       .desktopView main #galleria .section div p {
         color: white; }
       .desktopView main #galleria .section div p {
-        padding: 20px 33px;
-        font-size: 22px; }
+        padding: 10% 16%;
+        font-size: 22px;
+        line-height: 2em; }
       .desktopView main #galleria .section div h3 {
         font-size: 30px;
         margin-bottom: 20px; }
@@ -464,10 +481,21 @@ main #contacts {
     .desktopView main #contacts .mapContainer {
       width: 70%; }
 
-main #eventi.noEvents p {
-  padding: 50px 0;
-  font-size: 20px;
-  text-align: center; }
+main #eventi {
+  text-align: center;
+  font-size: 25px; }
+  main #eventi p {
+    padding: 10px 0;
+    font-weight: bold; }
+  main #eventi ul li {
+    padding: 10px 0;
+    text-decoration: underline; }
+  main #eventi .details {
+    font-size: 15px; }
+  main #eventi.noEvents p {
+    padding: 50px 0;
+    font-size: 20px;
+    text-align: center; }
 
 main #eventi .wrapper {
   display: flex;
