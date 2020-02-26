@@ -28,9 +28,6 @@ h3 {
 article {
   margin-bottom: 100px; }
 
-body.mobileView.overflowHidden {
-  overflow: hidden; }
-
 header .hamburgerContainer {
   background-color: black;
   position: fixed;
