@@ -6,8 +6,8 @@ $(document).ready(function () {
     CLASS_FADEIN = "fadeIn",
     navbarHeight = 100,
     userAgent = userAgent = navigator.userAgent || navigator.vendor || window.opera,
-    isSmartphone = userAgent.match('/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i') || window.matchMedia('(max-width: 1024px)').matches,
-    isTablet = userAgent.match(/iPad/i) || window.matchMedia('(max-width: 1024px)').matches,
+    isSmartphone = userAgent.match('/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i') || window.matchMedia('(max-width: 768px)').matches,
+    isTablet = window.matchMedia('(max-width: 768px)').matches,
     isMobile = isSmartphone || isTablet;
 
   isMobile ? $body.addClass("mobileView") : $body.addClass("desktopView");
