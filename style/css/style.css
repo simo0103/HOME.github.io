@@ -425,7 +425,7 @@ main #galleria .second .middle {
       .desktopView main #galleria .section div p {
         color: white; }
       .desktopView main #galleria .section div p {
-        padding: 10% 16%;
+        padding: 0 16%;
         font-size: 22px;
         line-height: 1em; }
         @media only screen and (min-width: 1280px) {
@@ -475,6 +475,9 @@ main #contacts {
   main #contacts .mapContainer {
     overflow: hidden;
     background: none !important; }
+    main #contacts .mapContainer img {
+      width: 100%;
+      display: block; }
     .desktopView main #contacts .mapContainer {
       width: 70%; }
 
