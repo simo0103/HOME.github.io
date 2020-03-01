@@ -5,6 +5,8 @@ $(document).ready(function () {
     CLASS_OPEN = "open",
     CLASS_FADEIN = "fadeIn",
     navbarHeight = 100,
+    $modal = $('.modal'),
+    galleryImages = $("#gallery").find('img'),
     userAgent = userAgent = navigator.userAgent || navigator.vendor || window.opera,
     isSmartphone = userAgent.match('/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i') || window.matchMedia('(max-width: 768px)').matches,
     isTablet = window.matchMedia('(max-width: 768px)').matches,
@@ -76,6 +78,24 @@ $(document).ready(function () {
       });
     }
     /* -------------- end gallery    ---------------*/
+
+    galleryImages.on("click", function (event) {
+      var $clickedImage = $(this),
+        $src = $clickedImage.attr('src'),
+        $alt = $clickedImage.attr('alt');
+      $modal.css('display', 'flex');
+      $body.css('overflow', 'hidden');
+      $modal.find('img').attr('src', $src);
+
+      console.log($clickedImage)
+
+    });
+    $('.modal .close').on("click", function () {
+      $modal.css('display', 'none');
+      $body.css('overflow', 'auto');
+
+    });
+
 
     $("article").each(function () {
       var $el = $(this),
