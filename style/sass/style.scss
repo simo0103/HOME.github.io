@@ -55,15 +55,22 @@ article {
 
 	>div {
 		padding: 20% 2% 30%;
-		background: white;
+		background-color: white;
 		text-align: right;
 
+		.desktopView & {
+			padding: 30% 2%;
+			width: 60%;
+			margin: 0 auto;
+			background-color: transparent
+		}
 	}
 }
 
 .modal img {
 	width: 100%;
 	display: block;
+
 }
 
 .modalImage {
@@ -78,6 +85,11 @@ article {
 	font-size: 40px;
 	font-weight: bold;
 	transition: 0.3s;
+
+	.desktopView & {
+		color: white;
+		font-size: 50px;
+	}
 }
 
 .close:hover,
@@ -443,6 +455,7 @@ main {
 			align-self: center;
 
 			img {
+				cursor: pointer;
 				min-height: 100%;
 				padding-bottom: 10px;
 				object-fit: cover;
