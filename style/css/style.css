@@ -628,6 +628,11 @@ footer {
   height: auto;
   background-color: black;
   position: relative; }
+  footer article {
+    padding: 40px 0 0 0;
+    margin: 0; }
+  footer h2 {
+    color: white; }
   footer .envelope {
     background-image: url(../images/svg/mail.svg);
     width: 50px;
@@ -692,7 +697,7 @@ footer {
     text-align: center;
     padding: 25px 0; }
     footer div.social {
-      border-top: 2px solid white; }
+      border-top: 3px solid white; }
     footer div p,
     footer div a {
       padding: 20px; }
