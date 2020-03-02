@@ -1,9 +1,11 @@
 $(document).ready(function () {
   var $body = $("body"),
+    $html = $('html'),
     $link = $('a[href*="#"]'),
     CLASS_ACTIVE = "active",
     CLASS_OPEN = "open",
     CLASS_FADEIN = "fadeIn",
+    CLASS_NO_OVERFLOW = "overflowHidden",
     navbarHeight = 100,
     $modal = $('.modal'),
     galleryImages = $("#gallery").find('img'),
@@ -21,8 +23,9 @@ $(document).ready(function () {
     $this = $(this);
     toggleClassActive($this);
     scrollIntoTheView(event);
-    !$this.hasClass("fa-angle-down") ? $hamburgerMenu.trigger("click") : null;
+    !$this.hasClass("arrow") ? $hamburgerMenu.trigger("click") : null;
     isMobile && $("nav").hasClass(CLASS_OPEN) ? $("nav").removeClass(CLASS_OPEN) : "";
+    $html.removeClass(CLASS_NO_OVERFLOW);
   });
 
   $sliderContainer.slick({
@@ -39,7 +42,7 @@ $(document).ready(function () {
   $hamburgerMenu.on("click", function (e) {
     $(this).toggleClass(CLASS_ACTIVE);
     $("nav").toggleClass(CLASS_OPEN);
-    $('body').toggleClass('overflowHidden');
+    $html.toggleClass(CLASS_NO_OVERFLOW);
   });
 
   /* ------ for menu ------- */
@@ -84,7 +87,7 @@ $(document).ready(function () {
         $src = $clickedImage.attr('src'),
         $alt = $clickedImage.attr('alt');
       $modal.css('display', 'flex');
-      $body.css('overflow', 'hidden');
+      $html.addClass(CLASS_NO_OVERFLOW);
       $modal.find('img').attr('src', $src);
 
       console.log($clickedImage)
@@ -92,7 +95,7 @@ $(document).ready(function () {
     });
     $('.modal .close').on("click", function () {
       $modal.css('display', 'none');
-      $body.css('overflow', 'auto');
+      $html.removeClass(CLASS_NO_OVERFLOW);
 
     });
 

@@ -33,8 +33,28 @@ h3 {
 	}
 }
 
+@mixin svg ($url, $width, $height) {
+	background-image: $url;
+	width: $width;
+	height: $height;
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 article {
 	margin-bottom: 100px;
+}
+html {
+	&.overflowHidden {
+		overflow: hidden;
+		position: relative;
+
+		body {
+			overflow: hidden;
+			position: relative;
+		}
+	}
 }
 
 //-------------------------------//
@@ -48,21 +68,20 @@ article {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
+	overflow: hidden;
 	background-color: rgb(0, 0, 0);
 	/* Fallback color */
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.9);
 
-	>div {
+	> div {
 		padding: 20% 2% 30%;
-		background-color: white;
 		text-align: right;
 
 		.desktopView & {
 			padding: 30% 2%;
 			width: 60%;
 			margin: 0 auto;
-			background-color: transparent
+			background-color: transparent;
 		}
 	}
 }
@@ -70,7 +89,6 @@ article {
 .modal img {
 	width: 100%;
 	display: block;
-
 }
 
 .modalImage {
@@ -81,15 +99,10 @@ article {
 }
 
 .close {
-	color: black;
-	font-size: 40px;
+	color: white;
+	font-size: 50px;
 	font-weight: bold;
 	transition: 0.3s;
-
-	.desktopView & {
-		color: white;
-		font-size: 50px;
-	}
 }
 
 .close:hover,
@@ -98,7 +111,6 @@ article {
 	text-decoration: none;
 	cursor: pointer;
 }
-
 
 @-webkit-keyframes zoom {
 	from {
@@ -119,7 +131,6 @@ article {
 		transform: scale(1);
 	}
 }
-
 
 //HEADER
 
@@ -358,7 +369,7 @@ main {
 		width: 100%;
 		padding-bottom: 50px;
 
-		>div {
+		> div {
 			position: relative;
 		}
 
@@ -392,11 +403,9 @@ main {
 			align-items: flex-end;
 		}
 
-		.fa {
-			font-size: 85px;
-			color: #ffffffd1;
+		.arrow {
+			@include svg(url(../images/svg/arrow_1.svg), 11%, 30px);
 
-			display: inline-block;
 			cursor: pointer;
 
 			&.bounce {
@@ -424,7 +433,7 @@ main {
 
 	//introduction
 	.introduction {
-		>p {
+		> p {
 			text-transform: uppercase;
 			text-align: center;
 			line-height: 1.5em;
@@ -529,7 +538,7 @@ main {
 			font-size: 20px;
 		}
 
-		.menuList>div {
+		.menuList > div {
 			overflow: hidden;
 			max-height: 60px;
 			transition: max-height 0.5s ease-out;
@@ -562,7 +571,7 @@ main {
 		}
 
 		.menuList {
-			>div {
+			> div {
 				margin: 0 auto 20px;
 
 				.desktopView & {
@@ -626,7 +635,7 @@ main {
 				}
 			}
 
-			>div {
+			> div {
 				.desktopView & {
 					width: 45%;
 				}
@@ -651,7 +660,7 @@ main {
 			text-align: left;
 			padding-bottom: 10px;
 
-			>span {
+			> span {
 				&:first-child {
 					display: block;
 					text-transform: capitalize;
@@ -675,7 +684,7 @@ main {
 				background-color: black;
 				color: white;
 
-				>div {
+				> div {
 					height: 300px;
 				}
 
@@ -927,7 +936,6 @@ main {
 	}
 
 	@-webkit-keyframes bounce {
-
 		0%,
 		20%,
 		50%,
@@ -946,7 +954,6 @@ main {
 	}
 
 	@keyframes bounce {
-
 		0%,
 		20%,
 		50%,
@@ -970,6 +977,22 @@ footer {
 	height: auto;
 	background-color: black;
 	position: relative;
+
+	.envelope {
+		@include svg(url(../images/svg/mail.svg), 50px, 50px);
+	}
+	.mapMarker {
+		@include svg(url(../images/svg/mapmarker.svg), 50px, 50px);
+	}
+	.phoneSvg {
+		@include svg(url(../images/svg/phone.svg), 50px, 50px);
+	}
+	.facebook {
+		@include svg(url(../images/svg/faceb.svg), 30px, 30px);
+	}
+	.instagram {
+		@include svg(url(../images/svg/inst.svg), 30px, 30px);
+	}
 
 	.contattiContainer {
 		display: flex;

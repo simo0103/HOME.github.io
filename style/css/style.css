@@ -29,6 +29,13 @@ h3 {
 article {
   margin-bottom: 100px; }
 
+html.overflowHidden {
+  overflow: hidden;
+  position: relative; }
+  html.overflowHidden body {
+    overflow: hidden;
+    position: relative; }
+
 .modal {
   display: none;
   justify-content: center;
@@ -39,13 +46,12 @@ article {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   background-color: black;
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(0, 0, 0, 0.9); }
   .modal > div {
     padding: 20% 2% 30%;
-    background-color: white;
     text-align: right; }
     .desktopView .modal > div {
       padding: 30% 2%;
@@ -64,13 +70,10 @@ article {
   animation-duration: 0.6s; }
 
 .close {
-  color: black;
-  font-size: 40px;
+  color: white;
+  font-size: 50px;
   font-weight: bold;
   transition: 0.3s; }
-  .desktopView .close {
-    color: white;
-    font-size: 50px; }
 
 .close:hover,
 .close:focus {
@@ -257,19 +260,22 @@ main .cover {
     display: flex;
     justify-content: center;
     align-items: flex-end; }
-  main .cover .fa {
-    font-size: 85px;
-    color: #ffffffd1;
+  main .cover .arrow {
+    background-image: url(../images/svg/arrow_1.svg);
+    width: 11%;
+    height: 30px;
     display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer; }
-    main .cover .fa.bounce {
+    main .cover .arrow.bounce {
       -webkit-animation-name: bounce;
       animation-name: bounce;
       -webkit-transform-origin: center bottom;
       transform-origin: center bottom;
       animation-iteration-count: infinite;
       -webkit-animation-iteration-count: infinite; }
-    main .cover .fa.animated {
+    main .cover .arrow.animated {
       -webkit-animation-duration: 2s;
       animation-duration: 2s;
       -webkit-animation-fill-mode: both;
@@ -622,6 +628,41 @@ footer {
   height: auto;
   background-color: black;
   position: relative; }
+  footer .envelope {
+    background-image: url(../images/svg/mail.svg);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  footer .mapMarker {
+    background-image: url(../images/svg/mapmarker.svg);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  footer .phoneSvg {
+    background-image: url(../images/svg/phone.svg);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  footer .facebook {
+    background-image: url(../images/svg/faceb.svg);
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  footer .instagram {
+    background-image: url(../images/svg/inst.svg);
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat; }
   footer .contattiContainer {
     display: flex;
     justify-content: space-around;
