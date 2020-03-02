@@ -23,7 +23,10 @@ $(document).ready(function () {
     $this = $(this);
     toggleClassActive($this);
     scrollIntoTheView(event);
-    !$this.hasClass("arrow") ? $hamburgerMenu.trigger("click") : null;
+    if (!$this.hasClass('notAlink')) {
+      $hamburgerMenu.trigger("click");
+    }
+
     isMobile && $("nav").hasClass(CLASS_OPEN) ? $("nav").removeClass(CLASS_OPEN) : "";
     $html.removeClass(CLASS_NO_OVERFLOW);
   });

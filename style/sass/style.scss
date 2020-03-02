@@ -40,6 +40,7 @@ h3 {
 	display: inline-block;
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 
 article {
@@ -55,6 +56,13 @@ html {
 			position: relative;
 		}
 	}
+}
+
+.notAlink:not(.angleDown) {
+	color: white;
+	padding: 10px 0;
+	border-bottom: 1px solid white;
+	text-transform: uppercase;
 }
 
 //-------------------------------//
@@ -394,18 +402,15 @@ main {
 
 		.angleOverlay {
 			width: 100%;
-			height: 86%;
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: 80%;
 			display: flex;
 			justify-content: center;
 			align-items: flex-end;
 		}
 
-		.arrow {
+		.angleDown {
 			@include svg(url(../images/svg/arrow_1.svg), 11%, 30px);
-
 			cursor: pointer;
 
 			&.bounce {
@@ -535,7 +540,7 @@ main {
 		}
 
 		.fas {
-			font-size: 20px;
+			@include svg(url(../images/svg/arr.svg), 5%, 11px);
 		}
 
 		.menuList > div {
@@ -747,6 +752,7 @@ main {
 						display: flex;
 						flex-direction: column;
 						justify-content: center;
+						align-items: center;
 					}
 
 					.overlay {
