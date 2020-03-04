@@ -46,6 +46,7 @@ h3 {
 article {
 	margin-bottom: 100px;
 }
+
 html {
 	&.overflowHidden {
 		overflow: hidden;
@@ -60,9 +61,11 @@ html {
 
 .notAlink:not(.angleDown) {
 	color: white;
-	padding: 10px 0;
-	border-bottom: 1px solid white;
+	padding: 10px;
+	border: 1px solid white;
 	text-transform: uppercase;
+	font-size: 15px;
+	margin-top: 10px;
 }
 
 //-------------------------------//
@@ -81,7 +84,7 @@ html {
 	/* Fallback color */
 	background-color: rgba(0, 0, 0, 0.9);
 
-	> div {
+	>div {
 		padding: 20% 2% 30%;
 		text-align: right;
 
@@ -291,7 +294,7 @@ header {
 			}
 
 			li {
-				width: 16.66%;
+				width: 16%;
 				text-align: center;
 				cursor: pointer;
 
@@ -377,7 +380,7 @@ main {
 		width: 100%;
 		padding-bottom: 50px;
 
-		> div {
+		>div {
 			position: relative;
 		}
 
@@ -438,7 +441,7 @@ main {
 
 	//introduction
 	.introduction {
-		> p {
+		>p {
 			text-transform: uppercase;
 			text-align: center;
 			line-height: 1.5em;
@@ -543,7 +546,7 @@ main {
 			@include svg(url(../images/svg/arr.svg), 5%, 11px);
 		}
 
-		.menuList > div {
+		.menuList>div {
 			overflow: hidden;
 			max-height: 60px;
 			transition: max-height 0.5s ease-out;
@@ -576,7 +579,7 @@ main {
 		}
 
 		.menuList {
-			> div {
+			>div {
 				margin: 0 auto 20px;
 
 				.desktopView & {
@@ -640,7 +643,7 @@ main {
 				}
 			}
 
-			> div {
+			>div {
 				.desktopView & {
 					width: 45%;
 				}
@@ -665,7 +668,7 @@ main {
 			text-align: left;
 			padding-bottom: 10px;
 
-			> span {
+			>span {
 				&:first-child {
 					display: block;
 					text-transform: capitalize;
@@ -689,7 +692,7 @@ main {
 				background-color: black;
 				color: white;
 
-				> div {
+				>div {
 					height: 300px;
 				}
 
@@ -822,6 +825,12 @@ main {
 		margin-bottom: 50px;
 
 		.orari {
+			margin-top: 40px;
+
+			.desktopView & {
+				margin-top: 0;
+			}
+
 			h3 {
 				text-transform: uppercase;
 				margin-bottom: 20px;
@@ -833,6 +842,7 @@ main {
 			.wrapper {
 				display: flex;
 				justify-content: space-between;
+				padding-right: 5%;
 			}
 		}
 
@@ -867,6 +877,10 @@ main {
 	#eventi {
 		text-align: center;
 		font-size: 25px;
+
+		.desktopView & {
+			margin-bottom: 400px;
+		}
 
 		p {
 			padding: 10px 0;
@@ -942,6 +956,7 @@ main {
 	}
 
 	@-webkit-keyframes bounce {
+
 		0%,
 		20%,
 		50%,
@@ -960,6 +975,7 @@ main {
 	}
 
 	@keyframes bounce {
+
 		0%,
 		20%,
 		50%,
@@ -984,6 +1000,18 @@ footer {
 	background-color: black;
 	position: relative;
 
+	.policy {
+
+		text-align: right;
+		width: 80%;
+		margin: 0 auto;
+
+		a,
+		.desktopView & a {
+			font-size: 10px;
+		}
+	}
+
 	article {
 		padding: 40px 0 0 0;
 		margin: 0;
@@ -996,15 +1024,19 @@ footer {
 	.envelope {
 		@include svg(url(../images/svg/mail.svg), 50px, 50px);
 	}
+
 	.mapMarker {
 		@include svg(url(../images/svg/mapmarker.svg), 50px, 50px);
 	}
+
 	.phoneSvg {
 		@include svg(url(../images/svg/phone.svg), 50px, 50px);
 	}
+
 	.facebook {
 		@include svg(url(../images/svg/faceb.svg), 30px, 30px);
 	}
+
 	.instagram {
 		@include svg(url(../images/svg/inst.svg), 30px, 30px);
 	}
@@ -1032,15 +1064,6 @@ footer {
 		.desktopView & {
 			font-size: 25px;
 		}
-	}
-
-	.privacy {
-		font-size: 15px;
-		width: 90%;
-		margin: 0 auto;
-		text-align: right;
-		position: absolute;
-		bottom: 10px;
 	}
 
 	div {

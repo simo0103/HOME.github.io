@@ -38,9 +38,11 @@ html.overflowHidden {
 
 .notAlink:not(.angleDown) {
   color: white;
-  padding: 10px 0;
-  border-bottom: 1px solid white;
-  text-transform: uppercase; }
+  padding: 10px;
+  border: 1px solid white;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-top: 10px; }
 
 .modal {
   display: none;
@@ -194,7 +196,7 @@ header nav {
       width: 97%;
       margin: 0 auto; }
     header nav ul li {
-      width: 16.66%;
+      width: 16%;
       text-align: center;
       cursor: pointer; }
       .desktopView header nav ul li {
@@ -539,13 +541,18 @@ main #galleria .second .middle {
 
 main #contacts {
   margin-bottom: 50px; }
-  main #contacts .orari h3 {
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    font-weight: bold; }
+  main #contacts .orari {
+    margin-top: 40px; }
+    .desktopView main #contacts .orari {
+      margin-top: 0; }
+    main #contacts .orari h3 {
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-weight: bold; }
   .desktopView main #contacts .wrapper {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding-right: 5%; }
   main #contacts li {
     padding-bottom: 10px;
     display: flex;
@@ -565,6 +572,8 @@ main #contacts {
 main #eventi {
   text-align: center;
   font-size: 25px; }
+  .desktopView main #eventi {
+    margin-bottom: 400px; }
   main #eventi p {
     padding: 10px 0;
     font-weight: bold; }
@@ -640,6 +649,13 @@ footer {
   height: auto;
   background-color: black;
   position: relative; }
+  footer .policy {
+    text-align: right;
+    width: 80%;
+    margin: 0 auto; }
+    footer .policy a,
+    .desktopView footer .policy a {
+      font-size: 10px; }
   footer article {
     padding: 40px 0 0 0;
     margin: 0; }
@@ -703,13 +719,6 @@ footer {
     .desktopView footer p, .desktopView
     footer a {
       font-size: 25px; }
-  footer .privacy {
-    font-size: 15px;
-    width: 90%;
-    margin: 0 auto;
-    text-align: right;
-    position: absolute;
-    bottom: 10px; }
   footer div {
     text-align: center;
     padding: 25px 0; }
