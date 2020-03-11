@@ -59,13 +59,18 @@ html {
 	}
 }
 
+h1 {
+	color: transparent;
+	width: 0;
+	height: 0;
+}
+
 .notAlink:not(.angleDown) {
 	color: white;
-	padding: 10px;
-	border: 1px solid white;
+	padding: 10px 0;
+	border-bottom: 1px solid white;
 	text-transform: uppercase;
 	font-size: 15px;
-	margin-top: 10px;
 }
 
 //-------------------------------//
@@ -221,6 +226,10 @@ header {
 		z-index: 2000;
 		position: fixed;
 		height: auto;
+
+		.desktopView & {
+			transition: none;
+		}
 
 		li {
 			display: none;
@@ -868,6 +877,41 @@ main {
 
 			.desktopView & {
 				width: 70%;
+			}
+		}
+	}
+
+	.beerGallery {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+
+		.desktopView & {
+			flex-wrap: nowrap;
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #00000059;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		>div:not(.overlay) {
+			width: 33.33%;
+
+			img {
+				max-width: 100%;
+				display: block;
 			}
 		}
 	}
