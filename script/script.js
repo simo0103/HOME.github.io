@@ -35,11 +35,13 @@ $(document).ready(function () {
     dots: true,
     infinite: true,
     speed: 300,
+    swipeToSlide: true,
+    swipe: true,
     slidesToShow: 1,
     centerMode: false,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 8000,
   });
 
   $hamburgerMenu.on("click", function (e) {
@@ -85,22 +87,22 @@ $(document).ready(function () {
     }
     /* -------------- end gallery    ---------------*/
 
-    galleryImages.on("click", function (event) {
-      var $clickedImage = $(this),
-        $src = $clickedImage.attr('src'),
-        $alt = $clickedImage.attr('alt');
-      $modal.css('display', 'flex');
-      $html.addClass(CLASS_NO_OVERFLOW);
-      $modal.find('img').attr('src', $src);
+    // galleryImages.on("click", function (event) {
+    //   var $clickedImage = $(this),
+    //     $src = $clickedImage.attr('src'),
+    //     $alt = $clickedImage.attr('alt');
+    //   $modal.css('display', 'flex');
+    //   $html.addClass(CLASS_NO_OVERFLOW);
+    //   $modal.find('img').attr('src', $src);
 
-      console.log($clickedImage)
+    //   console.log($clickedImage)
 
-    });
-    $('.modal .close').on("click", function () {
-      $modal.css('display', 'none');
-      $html.removeClass(CLASS_NO_OVERFLOW);
+    // });
+    // $('.modal .close').on("click", function () {
+    //   $modal.css('display', 'none');
+    //   $html.removeClass(CLASS_NO_OVERFLOW);
 
-    });
+    // });
 
 
     $("article").each(function () {
@@ -134,7 +136,7 @@ $(document).ready(function () {
   });
   //----------------END SCROLL ------------------//
   appendMenu();
-  //carousel();
+  carousel();
 
   //scroll into the view
   function scrollIntoTheView(event) {
@@ -161,16 +163,19 @@ $(document).ready(function () {
     }
   }
 
-  //SLICK
-  // function carousel() {
-  //   $("div.gallery").slick({
-  //     slidesToShow: isMobile ? 1 : 3,
-  //     slidesToScroll: 1,
-  //     autoplay: true,
-  //     autoplaySpeed: isMobile ? 4000 : 2000,
-  //     dots: isMobile ? true : false
-  //   });
-  // }
+
+  function carousel() {
+    $("div.gallery").slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      arrows: isMobile ? false : true,
+      swipeToSlide: true,
+      swipe: true,
+      dots: true
+    });
+  }
   /* ------ menu api ----------- */
   function appendMenu() {
     $.each(menu.pastadisemola, function (key, value) {
@@ -240,6 +245,27 @@ $(document).ready(function () {
       $("#menu .elenco .panini").append($html);
     });
 
+    $.each(menu.piade, function (key, value) {
+      var nomePiatto = value.name,
+
+        $html =
+          "<div class='piatto'><p>" +
+          nomePiatto +
+          "</p></div> ";
+      $("#menu .elenco .piade").append($html);
+    });
+
+    $.each(menu.crostini, function (key, value) {
+      var nomePiatto = value.name,
+        ingredienti = value.ingredienti,
+        $html =
+          "<div class='piatto'><p>" +
+          nomePiatto +
+          "</p><span class='ingredienti'>" +
+          ingredienti +
+          "</span></div> ";
+      $("#menu .elenco .crostini").append($html);
+    });
     $.each(bar.birreSpina, function (key, value) {
       var nomeBirra = value.name,
         categoria = value.categoria,

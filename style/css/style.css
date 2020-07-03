@@ -316,23 +316,24 @@ main #gallery h3 {
   font-size: 30px;
   margin-bottom: 40px; }
 
-main #gallery .gallery {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-self: center; }
-  main #gallery .gallery img {
-    cursor: pointer;
-    min-height: 100%;
-    padding-bottom: 10px;
-    object-fit: cover;
-    width: 49%;
-    align-self: center; }
-    .desktopView main #gallery .gallery img {
-      width: 33%;
-      padding: 0.3% 0; }
-  main #gallery .gallery .slick-slide {
-    padding: 0 1%; }
+main #gallery .slick-next::before {
+  background: url("../images/svg/arr_right.svg") no-repeat;
+  content: "";
+  display: block;
+  height: 35px;
+  width: 35px; }
+
+main #gallery .slick-prev::before {
+  background: url("../images/svg/arr_left.svg") no-repeat;
+  content: "";
+  display: block;
+  height: 35px;
+  width: 35px; }
+
+main #gallery .gallery img {
+  padding: 0 2%; }
+  .desktopView main #gallery .gallery img {
+    padding: 0 25%; }
 
 main .divider {
   text-align: center;
@@ -770,3 +771,16 @@ footer {
       justify-content: space-between; }
       footer ul li span {
         color: white; }
+
+body.menuDragonQrCode {
+  vertical-align: top;
+  font-size: 14px; }
+  body.menuDragonQrCode table {
+    border-collapse: collapse;
+    width: 100%; }
+  body.menuDragonQrCode tbody {
+    text-transform: capitalize; }
+    body.menuDragonQrCode tbody tr:not(.sizes) {
+      border-bottom: 2px solid black; }
+    body.menuDragonQrCode tbody td:not(.beerName) {
+      text-align: right; }

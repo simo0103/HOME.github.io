@@ -314,6 +314,63 @@ var menu = {
     "price": 8,
     "ingredienti": "salsa bernese, prosciutto crudo, mozzarella"
   }
-  ]
+  ],
+  "piade": [{
+    "name": "rucola, stracchino e prosciutto crudo",
+
+  },
+  {
+    "name": "rucola e stracchino",
+
+  },
+  {
+    "name": "prosciutto cotto e mozzarella",
+  },
+  {
+    "name": "salame e fontina",
+  },
+  {
+    "name": "salame piccante e fontina",
+  },
+  {
+    "name": "prosciutto crudo e mozzarella",
+  },
+  {
+    "name": "piada alla nutella",
+  }
+  ],
+  "crostini": [{
+    "name": "bruschetta",
+    "ingredienti": "aglio, olio, sale"
+  },
+  {
+    "name": "romana",
+    "ingredienti": "aglio, olio, sale, pomodoro fresco"
+  },
+  {
+    "name": "crostino 1",
+    "ingredienti": "pomodoro, mozzarella, acciughe"
+  },
+  {
+    "name": "crostino 2",
+    "ingredienti": "quattro formaggi"
+  },
+  {
+    "name": "crostino 3",
+    "ingredienti": "misto"
+  },
+  {
+    "name": "crostino 4",
+    "ingredienti": "mozzarella, prosciutto crudo, rucola"
+  },
+  {
+    "name": "crostino 5",
+    "ingredienti": "pancetta, grana, aceto balsamico"
+  },
+  {
+    "name": "crostino 6",
+    "ingredienti": " gorgonzola, speck"
+  }
+  ],
 
 }
