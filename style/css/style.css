@@ -316,19 +316,25 @@ main #gallery h3 {
   font-size: 30px;
   margin-bottom: 40px; }
 
-main #gallery .slick-next::before {
-  background: url("../images/svg/arr_right.svg") no-repeat;
-  content: "";
-  display: block;
-  height: 35px;
-  width: 35px; }
+main #gallery .slick-next {
+  right: 10%;
+  z-index: 100; }
+  main #gallery .slick-next::before {
+    background: url("../images/svg/arr_right.svg") no-repeat;
+    content: "";
+    display: block;
+    height: 40px;
+    width: 40px; }
 
-main #gallery .slick-prev::before {
-  background: url("../images/svg/arr_left.svg") no-repeat;
-  content: "";
-  display: block;
-  height: 35px;
-  width: 35px; }
+main #gallery .slick-prev {
+  left: 10%;
+  z-index: 100; }
+  main #gallery .slick-prev::before {
+    background: url("../images/svg/arr_left.svg") no-repeat;
+    content: "";
+    display: block;
+    height: 40px;
+    width: 40px; }
 
 main #gallery .gallery img {
   padding: 0 2%; }
