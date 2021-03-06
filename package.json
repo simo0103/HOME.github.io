@@ -18,7 +18,7 @@
   "homepage": "https://github.com/simo0103/HOME#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-watch-sass": "^1.4.1"
   },
   "dependencies": {

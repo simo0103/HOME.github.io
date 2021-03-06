@@ -1,0 +1,21 @@
+$tabletPortrait: 768;
+$desktopStart: 1025px;
+$desktopMPDI: 1028px;
+
+@mixin tablet {
+    @media (min-width: #{$tabletPortrait}) {
+        @content;
+    }
+}
+
+@mixin desktop_start {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin desktop_mpdi {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}

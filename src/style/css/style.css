@@ -23,8 +23,9 @@ h2 {
 h3 {
   font-size: 27px;
   text-transform: uppercase; }
-  h3 .desktopView {
-    font-size: 30px; }
+  @media (min-width: 768) {
+    h3 {
+      font-size: 30px; } }
 
 article {
   margin-bottom: 100px; }
@@ -369,10 +370,11 @@ main #menu {
     main #menu .elenco div:not(.piatto) {
       margin-bottom: 10px;
       padding-right: 20px; }
-    .desktopView main #menu .elenco {
-      display: flex;
-      justify-content: space-between;
-      text-align: left; }
+    @media (min-width: 768) {
+      main #menu .elenco {
+        display: flex;
+        justify-content: space-between;
+        text-align: left; } }
   main #menu .fas {
     background-image: url(../images/svg/arr.svg);
     width: 5%;
@@ -387,8 +389,9 @@ main #menu {
     transition: max-height 0.5s ease-out; }
     main #menu .menuList > div h3 {
       font-size: 25px; }
-      .desktopView main #menu .menuList > div h3 {
-        font-size: 30px; }
+      @media (min-width: 768) {
+        main #menu .menuList > div h3 {
+          font-size: 30px; } }
     main #menu .menuList > div.open {
       max-height: 1080px;
       height: auto;
@@ -692,8 +695,7 @@ footer {
     text-align: right;
     width: 80%;
     margin: 0 auto; }
-    footer .policy a,
-    .desktopView footer .policy a {
+    footer .policy a {
       font-size: 10px; }
   footer article {
     padding: 40px 0 0 0;
