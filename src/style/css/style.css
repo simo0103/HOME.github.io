@@ -195,26 +195,8 @@ header nav {
             font-size: 25px; } }
       header nav ul li.logo {
         display: none; }
-        .desktopView header nav ul li.logo {
-          display: block;
-          cursor: default;
-          position: relative; }
-          .desktopView header nav ul li.logo img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); }
       header nav ul li.slider {
         display: none; }
-        .desktopView header nav ul li.slider {
-          display: block;
-          position: absolute;
-          padding: 5px;
-          width: 14%;
-          background-color: #900a0a;
-          left: 0;
-          bottom: 0;
-          transition: left 0.2s linear; }
 
 @media (min-width: 769px) {
   header nav {
@@ -235,9 +217,25 @@ header nav {
           header nav ul li:hover a {
             color: lightgray; }
         header nav ul li.logo, header nav ul li.slider {
-          border-bottom: none; }
+          border-bottom: none;
+          display: block; }
+        header nav ul li.slider {
+          position: absolute;
+          padding: 5px;
+          width: 14%;
+          background-color: #900a0a;
+          left: 0;
+          bottom: 0;
+          transition: left 0.2s linear; }
         header nav ul li.logo {
-          width: 18%; }
+          width: 18%;
+          cursor: default;
+          position: relative; }
+          header nav ul li.logo img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
         header nav ul li a {
           padding: 40px 0; }
     header nav.sticky {
@@ -308,11 +306,12 @@ main .introduction > p {
   font-size: 20px;
   padding: 60px 10px 60px;
   font-weight: bold; }
-  .desktopView main .introduction > p {
-    font-size: 30px;
-    padding: 100px 17%;
-    margin: 0;
-    font-weight: bold; }
+  @media (min-width: 769px) {
+    main .introduction > p {
+      font-size: 30px;
+      padding: 100px 17%;
+      margin: 0;
+      font-weight: bold; } }
 
 main #gallery h3 {
   text-align: center;
@@ -341,8 +340,9 @@ main #gallery .slick-prev {
 
 main #gallery .gallery img {
   padding: 0 2%; }
-  .desktopView main #gallery .gallery img {
-    padding: 0 25%; }
+  @media (min-width: 769px) {
+    main #gallery .gallery img {
+      padding: 0 25%; } }
 
 main .divider {
   text-align: center;
@@ -352,8 +352,9 @@ main .divider {
   margin-bottom: 20px; }
   main .divider img {
     width: 35%; }
-    .desktopView main .divider img {
-      width: 10%; }
+    @media (min-width: 769px) {
+      main .divider img {
+        width: 10%; } }
 
 main #menu {
   text-transform: uppercase; }
@@ -408,8 +409,9 @@ main #menu {
     padding: 10px 0; }
   main #menu .menuList > div {
     margin: 0 auto 20px; }
-    .desktopView main #menu .menuList > div {
-      width: 70%; }
+    @media (min-width: 769px) {
+      main #menu .menuList > div {
+        width: 70%; } }
   main #menu .piatto {
     padding-bottom: 10px;
     font-size: 17px;
@@ -434,9 +436,10 @@ main #bar h3 {
 
 main #bar .barList {
   text-align: center; }
-  .desktopView main #bar .barList {
-    display: flex;
-    justify-content: space-between; }
+  @media (min-width: 769px) {
+    main #bar .barList {
+      display: flex;
+      justify-content: space-between; } }
   main #bar .barList .categoria {
     font-size: 20px;
     margin-bottom: 10px;
@@ -447,8 +450,9 @@ main #bar .barList {
       margin-top: 10px; }
   main #bar .barList > div {
     margin-bottom: 50px; }
-    .desktopView main #bar .barList > div {
-      width: 45%; }
+    @media (min-width: 769px) {
+      main #bar .barList > div {
+        width: 45%; } }
     main #bar .barList > div .container {
       display: flex;
       justify-content: space-between;
@@ -494,83 +498,104 @@ main #bar .containerVini {
 main #galleria .second .middle {
   order: 1; }
 
-.desktopView main #galleria {
-  height: auto;
-  display: flex;
-  flex-direction: column; }
-  .desktopView main #galleria .section {
-    display: block;
-    position: relative;
-    padding: 0;
-    margin: 0;
-    float: left; }
-    .desktopView main #galleria .section div {
-      width: 33.33%;
-      margin: 0 auto;
-      height: 60vh; }
-      .desktopView main #galleria .section div .content,
-      .desktopView main #galleria .section div .overlay {
-        width: 100%;
-        background-color: black; }
-      .desktopView main #galleria .section div .content {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; }
-      .desktopView main #galleria .section div .overlay {
-        opacity: 0.5;
-        cursor: pointer;
-        position: absolute; }
-      .desktopView main #galleria .section div h3,
-      .desktopView main #galleria .section div p {
-        color: white; }
-      .desktopView main #galleria .section div p {
-        padding: 0 16%;
-        font-size: 22px;
-        line-height: 1em; }
-        @media only screen and (min-width: 1280px) {
-          .desktopView main #galleria .section div p {
-            line-height: 2em; } }
-      .desktopView main #galleria .section div h3 {
-        font-size: 30px;
-        margin-bottom: 20px; }
-      .desktopView main #galleria .section div.left, .desktopView main #galleria .section div.right {
-        position: absolute;
-        right: 50%;
-        transform: translateX(50%);
-        top: 0;
-        z-index: -100;
-        transition: 0.5s ease-in-out all; }
-      .desktopView main #galleria .section div img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%; }
-    .desktopView main #galleria .section.animate .left {
-      left: 0;
-      transform: translateX(0);
-      right: unset;
-      z-index: 0; }
-    .desktopView main #galleria .section.animate .right {
+@media (min-width: 769px) {
+  main #galleria {
+    height: auto;
+    display: flex;
+    flex-direction: column; }
+    main #galleria .section {
       display: block;
-      right: 0;
-      transform: translateX(0);
-      z-index: 0; }
+      position: relative;
+      padding: 0;
+      margin: 0;
+      float: left; }
+      main #galleria .section div {
+        width: 33.33%;
+        margin: 0 auto;
+        height: 22vh; } }
+      @media (min-width: 769px) and (min-width: 1024px) {
+        main #galleria .section div {
+          height: 30vh; } }
+      @media (min-width: 769px) and (min-width: 1028px) {
+        main #galleria .section div {
+          height: 45vh; } }
+      @media (min-width: 769px) and (min-width: 1440px) {
+        main #galleria .section div {
+          height: 50vh; } }
+
+@media (min-width: 769px) {
+        main #galleria .section div .content,
+        main #galleria .section div .overlay {
+          width: 100%;
+          background-color: black; }
+        main #galleria .section div .content {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+        main #galleria .section div .overlay {
+          opacity: 0.5;
+          cursor: pointer;
+          position: absolute; }
+        main #galleria .section div h3,
+        main #galleria .section div p {
+          color: white; }
+        main #galleria .section div p {
+          padding: 0 16%;
+          font-size: 16px;
+          line-height: 1.5em; } }
+        @media (min-width: 769px) and (min-width: 1028px) {
+          main #galleria .section div p {
+            font-size: 22px; } }
+
+@media (min-width: 769px) {
+        main #galleria .section div h3 {
+          font-size: 24px;
+          margin-bottom: 20px; } }
+        @media (min-width: 769px) and (min-width: 1440px) {
+          main #galleria .section div h3 {
+            font-size: 28px; } }
+
+@media (min-width: 769px) {
+        main #galleria .section div.left, main #galleria .section div.right {
+          position: absolute;
+          right: 50%;
+          transform: translateX(50%);
+          top: 0;
+          z-index: -100;
+          transition: 0.5s ease-in-out all; }
+        main #galleria .section div img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%; }
+      main #galleria .section.animate .left {
+        left: 0;
+        transform: translateX(0);
+        right: unset;
+        z-index: 0; }
+      main #galleria .section.animate .right {
+        display: block;
+        right: 0;
+        transform: translateX(0);
+        z-index: 0; } }
 
 main #contacts {
   margin-bottom: 50px; }
   main #contacts .orari {
     margin-top: 40px; }
-    .desktopView main #contacts .orari {
-      margin-top: 0; }
+    @media (min-width: 769px) {
+      main #contacts .orari {
+        margin-top: 0; } }
     main #contacts .orari h3 {
       text-transform: uppercase;
       margin-bottom: 20px;
       font-weight: bold; }
-  .desktopView main #contacts .wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 5%; }
+  @media (min-width: 769px) {
+    main #contacts .wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 5%; } }
   main #contacts li {
     padding-bottom: 10px;
     display: flex;
@@ -581,18 +606,20 @@ main #contacts {
   main #contacts .mapContainer {
     overflow: hidden;
     background: none !important; }
+    @media (min-width: 769px) {
+      main #contacts .mapContainer {
+        width: 70%; } }
     main #contacts .mapContainer img {
       width: 100%;
       display: block; }
-    .desktopView main #contacts .mapContainer {
-      width: 70%; }
 
 main .beerGallery {
   display: flex;
   flex-wrap: wrap;
   position: relative; }
-  .desktopView main .beerGallery {
-    flex-wrap: nowrap; }
+  @media (min-width: 769px) {
+    main .beerGallery {
+      flex-wrap: nowrap; } }
   main .beerGallery .overlay {
     position: absolute;
     top: 0;
@@ -616,8 +643,9 @@ main .beerGallery {
 main #eventi {
   text-align: center;
   font-size: 25px; }
-  .desktopView main #eventi {
-    margin-bottom: 400px; }
+  @media (min-width: 769px) {
+    main #eventi {
+      margin-bottom: 400px; } }
   main #eventi p {
     padding: 10px 0;
     font-weight: bold; }
@@ -641,8 +669,9 @@ main #eventi .wrapper {
     margin: 0.5%;
     align-items: center;
     box-shadow: 10px 10px 21px -12px rgba(0, 0, 0, 0.75); }
-    .desktopView main #eventi .wrapper .eventContainer {
-      width: 24%; }
+    @media (min-width: 769px) {
+      main #eventi .wrapper .eventContainer {
+        width: 24%; } }
     main #eventi .wrapper .eventContainer .eventName {
       text-align: center;
       flex: 1; }
@@ -665,30 +694,6 @@ main #eventi .wrapper {
         display: block;
         padding-bottom: 5px; }
 
-@-webkit-keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -webkit-transform: translateY(0); }
-  40% {
-    -webkit-transform: translateY(-20px); }
-  60% {
-    -webkit-transform: translateY(-10px); } }
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0); }
-  40% {
-    transform: translateY(-20px); }
-  60% {
-    transform: translateY(-10px); } }
-
 footer {
   height: auto;
   background-color: black;
@@ -698,7 +703,11 @@ footer {
     width: 80%;
     margin: 0 auto; }
     footer .policy a {
-      font-size: 10px; }
+      font-size: 10px;
+      text-decoration: underline; }
+      @media (min-width: 769px) {
+        footer .policy a {
+          font-size: 20px; } }
   footer article {
     padding: 40px 0 0 0;
     margin: 0; }
@@ -759,9 +768,10 @@ footer {
     color: white;
     font-size: 20px;
     display: block; }
-    .desktopView footer p, .desktopView
-    footer a {
-      font-size: 25px; }
+    @media (min-width: 769px) {
+      footer p,
+      footer a {
+        font-size: 25px; } }
   footer div {
     text-align: center;
     padding: 25px 0; }
@@ -782,15 +792,26 @@ footer {
       footer ul li span {
         color: white; }
 
-body.menuDragonQrCode {
-  vertical-align: top;
-  font-size: 14px; }
-  body.menuDragonQrCode table {
-    border-collapse: collapse;
-    width: 100%; }
-  body.menuDragonQrCode tbody {
-    text-transform: capitalize; }
-    body.menuDragonQrCode tbody tr:not(.sizes) {
-      border-bottom: 2px solid black; }
-    body.menuDragonQrCode tbody td:not(.beerName) {
-      text-align: right; }
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-20px); }
+  60% {
+    -webkit-transform: translateY(-10px); } }
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-20px); }
+  60% {
+    transform: translateY(-10px); } }

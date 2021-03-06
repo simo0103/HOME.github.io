@@ -1,6 +1,13 @@
 $tabletPortrait: 769px;
-$desktopStart: 1025px;
+$desktopStart: 1024px;
 $desktopMPDI: 1028px;
+$desktopHD: 1440px;
+
+@mixin smartphone {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
 
 @mixin tablet {
     @media (min-width: #{$tabletPortrait}) {
@@ -9,13 +16,19 @@ $desktopMPDI: 1028px;
 }
 
 @mixin desktop_start {
-    @media (min-width: #{$desktop}) {
+    @media (min-width: #{$desktopStart}) {
         @content;
     }
 }
 
 @mixin desktop_mpdi {
-    @media (min-width: #{$desktop}) {
+    @media (min-width: #{$desktopMPDI}) {
+        @content;
+    }
+}
+
+@mixin desktop_middle {
+    @media (min-width: #{$desktopHD}) {
         @content;
     }
 }

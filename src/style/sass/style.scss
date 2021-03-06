@@ -274,40 +274,16 @@ header {
 
                 &.logo {
                     display: none;
-
-                    .desktopView & {
-                        display: block;
-                        cursor: default;
-                        position: relative;
-
-                        img {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                        }
-                    }
                 }
 
                 &.slider {
                     display: none;
-
-                    .desktopView & {
-                        display: block;
-                        position: absolute;
-                        padding: 5px;
-                        width: 14%;
-                        background-color: #900a0a;
-                        left: 0;
-                        bottom: 0;
-                        transition: left 0.2s linear;
-                    }
                 }
             }
         }
     }
 }
-
+// HEADER TABLET - DESKTOP
 header nav {
     @include tablet {
         transition: none;
@@ -334,10 +310,30 @@ header nav {
                 &.logo,
                 &.slider {
                     border-bottom: none;
+                    display: block;
+                }
+
+                &.slider {
+                    position: absolute;
+                    padding: 5px;
+                    width: 14%;
+                    background-color: #900a0a;
+                    left: 0;
+                    bottom: 0;
+                    transition: left 0.2s linear;
                 }
 
                 &.logo {
                     width: 18%;
+                    cursor: default;
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
                 }
 
                 a {
@@ -375,8 +371,6 @@ header nav {
 
 main {
     .cover {
-        //height: 100vh;
-
         width: 100%;
         padding-bottom: 50px;
 
@@ -449,7 +443,7 @@ main {
             padding: 60px 10px 60px;
             font-weight: bold;
 
-            .desktopView & {
+            @include tablet {
                 font-size: 30px;
                 padding: 100px 17%;
                 margin: 0;
@@ -495,7 +489,7 @@ main {
             img {
                 padding: 0 2%;
 
-                .desktopView & {
+                @include tablet {
                     padding: 0 25%;
                 }
             }
@@ -512,7 +506,7 @@ main {
         img {
             width: 35%;
 
-            .desktopView & {
+            @include tablet {
                 width: 10%;
             }
         }
@@ -593,7 +587,7 @@ main {
             > div {
                 margin: 0 auto 20px;
 
-                .desktopView & {
+                @include tablet {
                     width: 70%;
                 }
             }
@@ -637,7 +631,7 @@ main {
         .barList {
             text-align: center;
 
-            .desktopView & {
+            @include tablet {
                 display: flex;
                 justify-content: space-between;
             }
@@ -655,7 +649,7 @@ main {
             }
 
             > div {
-                .desktopView & {
+                @include tablet {
                     width: 45%;
                 }
 
@@ -737,8 +731,10 @@ main {
                 order: 1;
             }
         }
+    }
 
-        .desktopView & {
+    @include tablet {
+        #galleria {
             height: auto;
             display: flex;
             flex-direction: column;
@@ -753,7 +749,18 @@ main {
                 div {
                     width: 33.33%;
                     margin: 0 auto;
-                    height: 60vh;
+                    height: 22vh;
+
+                    @include desktop_start {
+                        height: 30vh;
+                    }
+                    @include desktop_mpdi {
+                        height: 45vh;
+                    }
+
+                    @include desktop_middle {
+                        height: 50vh;
+                    }
 
                     .content,
                     .overlay {
@@ -782,17 +789,20 @@ main {
 
                     p {
                         padding: 0 16%;
-                        font-size: 22px;
-                        line-height: 1em;
+                        font-size: 16px;
+                        line-height: 1.5em;
 
-                        @media only screen and (min-width: 1280px) {
-                            line-height: 2em;
+                        @include desktop_mpdi {
+                            font-size: 22px;
                         }
                     }
 
                     h3 {
-                        font-size: 30px;
+                        font-size: 24px;
                         margin-bottom: 20px;
+                        @include desktop_middle {
+                            font-size: 28px;
+                        }
                     }
 
                     &.left,
@@ -838,7 +848,7 @@ main {
         .orari {
             margin-top: 40px;
 
-            .desktopView & {
+            @include tablet {
                 margin-top: 0;
             }
 
@@ -849,7 +859,7 @@ main {
             }
         }
 
-        .desktopView & {
+        @include tablet {
             .wrapper {
                 display: flex;
                 justify-content: space-between;
@@ -871,14 +881,13 @@ main {
         .mapContainer {
             overflow: hidden;
             background: none !important;
+            @include tablet {
+                width: 70%;
+            }
 
             img {
                 width: 100%;
                 display: block;
-            }
-
-            .desktopView & {
-                width: 70%;
             }
         }
     }
@@ -888,7 +897,7 @@ main {
         flex-wrap: wrap;
         position: relative;
 
-        .desktopView & {
+        @include tablet {
             flex-wrap: nowrap;
         }
 
@@ -924,7 +933,7 @@ main {
         text-align: center;
         font-size: 25px;
 
-        .desktopView & {
+        @include tablet {
             margin-bottom: 400px;
         }
 
@@ -964,7 +973,7 @@ main {
             align-items: center;
             box-shadow: 10px 10px 21px -12px rgba(0, 0, 0, 0.75);
 
-            .desktopView & {
+            @include tablet {
                 width: 24%;
             }
 
@@ -1000,42 +1009,6 @@ main {
             }
         }
     }
-
-    @-webkit-keyframes bounce {
-        0%,
-        20%,
-        50%,
-        80%,
-        100% {
-            -webkit-transform: translateY(0);
-        }
-
-        40% {
-            -webkit-transform: translateY(-20px);
-        }
-
-        60% {
-            -webkit-transform: translateY(-10px);
-        }
-    }
-
-    @keyframes bounce {
-        0%,
-        20%,
-        50%,
-        80%,
-        100% {
-            transform: translateY(0);
-        }
-
-        40% {
-            transform: translateY(-20px);
-        }
-
-        60% {
-            transform: translateY(-10px);
-        }
-    }
 }
 
 //-----------------footer--------------------------
@@ -1051,6 +1024,10 @@ footer {
 
         a {
             font-size: 10px;
+            text-decoration: underline;
+            @include tablet {
+                font-size: 20px;
+            }
         }
     }
 
@@ -1103,7 +1080,7 @@ footer {
         font-size: 20px;
         display: block;
 
-        .desktopView & {
+        @include tablet {
             font-size: 25px;
         }
     }
@@ -1144,24 +1121,38 @@ footer {
     }
 }
 
-body.menuDragonQrCode {
-    vertical-align: top;
-    font-size: 14px;
-
-    table {
-        border-collapse: collapse;
-        width: 100%;
+@-webkit-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
     }
 
-    tbody {
-        text-transform: capitalize;
+    40% {
+        -webkit-transform: translateY(-20px);
+    }
 
-        tr:not(.sizes) {
-            border-bottom: 2px solid black;
-        }
+    60% {
+        -webkit-transform: translateY(-10px);
+    }
+}
 
-        td:not(.beerName) {
-            text-align: right;
-        }
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
     }
 }
