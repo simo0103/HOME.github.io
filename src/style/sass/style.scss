@@ -588,7 +588,11 @@ main {
                 margin: 0 auto 20px;
 
                 @include tablet {
-                    width: 70%;
+                    width: 90%;
+                }
+
+                @include desktop_start {
+                    width: 80%;
                 }
             }
         }
@@ -690,7 +694,7 @@ main {
 
     #galleria {
         .section {
-            .mobileView & {
+            @include smartphone {
                 text-align: center;
                 display: flex;
                 flex-direction: column;

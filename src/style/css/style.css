@@ -411,7 +411,10 @@ main #menu {
     margin: 0 auto 20px; }
     @media (min-width: 769px) {
       main #menu .menuList > div {
-        width: 70%; } }
+        width: 90%; } }
+    @media (min-width: 1024px) {
+      main #menu .menuList > div {
+        width: 80%; } }
   main #menu .piatto {
     padding-bottom: 10px;
     font-size: 17px;
@@ -471,29 +474,30 @@ main #bar .containerVini {
   main #bar .containerVini > span.descr {
     font-size: 11px; }
 
-.mobileView main #galleria .section {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  color: white; }
-  .mobileView main #galleria .section > div {
-    height: 300px; }
-  .mobileView main #galleria .section .content {
+@media (max-width: 768px) {
+  main #galleria .section {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-    padding: 0 10%; }
-    .mobileView main #galleria .section .content h3 {
-      margin-bottom: 20px; }
-  .mobileView main #galleria .section .right {
-    display: none; }
-  .mobileView main #galleria .section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+    background-color: black;
+    color: white; }
+    main #galleria .section > div {
+      height: 300px; }
+    main #galleria .section .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: center;
+      padding: 0 10%; }
+      main #galleria .section .content h3 {
+        margin-bottom: 20px; }
+    main #galleria .section .right {
+      display: none; }
+    main #galleria .section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; } }
 
 main #galleria .second .middle {
   order: 1; }
