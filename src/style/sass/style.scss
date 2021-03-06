@@ -93,8 +93,7 @@ h1 {
     > div {
         padding: 20% 2% 30%;
         text-align: right;
-
-        .desktopView & {
+        @include tablet {
             padding: 30% 2%;
             width: 60%;
             margin: 0 auto;
@@ -167,7 +166,7 @@ header {
         z-index: 2000;
         justify-content: space-between;
 
-        .desktopView & {
+        @include tablet {
             display: none;
         }
 
@@ -227,11 +226,6 @@ header {
         z-index: 2000;
         position: fixed;
         height: auto;
-
-        .desktopView & {
-            transition: none;
-        }
-
         li {
             display: none;
         }
@@ -255,85 +249,16 @@ header {
             }
         }
 
-        .desktopView & {
-            width: 100%;
-            top: 0;
-
-            li {
-                display: block;
-            }
-
-            &.sticky {
-                background-color: black;
-                box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.75);
-
-                ul {
-                    position: relative;
-
-                    li {
-                        a {
-                            color: white;
-                        }
-
-                        &.logo {
-                            visibility: visible;
-                        }
-
-                        &:hover {
-                            a {
-                                color: lightgray;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         ul {
             display: flex;
             flex-direction: column;
             position: relative;
             height: 100vh;
 
-            .desktopView & {
-                flex-direction: row;
-                height: auto;
-                justify-content: center;
-                width: 97%;
-                margin: 0 auto;
-            }
-
             li {
                 width: 16%;
                 text-align: center;
                 cursor: pointer;
-
-                .desktopView & {
-                    border-bottom: 9px solid transparent;
-
-                    &:hover {
-                        border-bottom: 9px solid grey;
-                    }
-
-                    &.logo,
-                    &.slider {
-                        border-bottom: none;
-                    }
-
-                    &.logo {
-                        width: 18%;
-                    }
-
-                    a {
-                        padding: 40px 0;
-                    }
-                }
-
-                &:hover {
-                    a {
-                        color: lightgray;
-                    }
-                }
 
                 a {
                     padding: 5px;
@@ -376,6 +301,71 @@ header {
                         left: 0;
                         bottom: 0;
                         transition: left 0.2s linear;
+                    }
+                }
+            }
+        }
+    }
+}
+
+header nav {
+    @include tablet {
+        transition: none;
+        width: 100%;
+        top: 0;
+
+        ul {
+            flex-direction: row;
+            height: auto;
+            justify-content: center;
+            width: 97%;
+            margin: 0 auto;
+            li {
+                display: block;
+                border-bottom: 9px solid transparent;
+
+                &:hover {
+                    border-bottom: 9px solid grey;
+                    a {
+                        color: lightgray;
+                    }
+                }
+
+                &.logo,
+                &.slider {
+                    border-bottom: none;
+                }
+
+                &.logo {
+                    width: 18%;
+                }
+
+                a {
+                    padding: 40px 0;
+                }
+            }
+        }
+
+        &.sticky {
+            background-color: black;
+            box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.75);
+
+            ul {
+                position: relative;
+
+                li {
+                    a {
+                        color: white;
+                    }
+
+                    &.logo {
+                        visibility: visible;
+                    }
+
+                    &:hover {
+                        a {
+                            color: lightgray;
+                        }
                     }
                 }
             }

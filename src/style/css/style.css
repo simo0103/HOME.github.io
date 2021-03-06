@@ -23,7 +23,7 @@ h2 {
 h3 {
   font-size: 27px;
   text-transform: uppercase; }
-  @media (min-width: 768) {
+  @media (min-width: 769px) {
     h3 {
       font-size: 30px; } }
 
@@ -66,11 +66,12 @@ h1 {
   .modal > div {
     padding: 20% 2% 30%;
     text-align: right; }
-    .desktopView .modal > div {
-      padding: 30% 2%;
-      width: 60%;
-      margin: 0 auto;
-      background-color: transparent; }
+    @media (min-width: 769px) {
+      .modal > div {
+        padding: 30% 2%;
+        width: 60%;
+        margin: 0 auto;
+        background-color: transparent; } }
 
 .modal img {
   width: 100%;
@@ -120,8 +121,9 @@ header .hamburgerContainer {
   align-items: center;
   z-index: 2000;
   justify-content: space-between; }
-  .desktopView header .hamburgerContainer {
-    display: none; }
+  @media (min-width: 769px) {
+    header .hamburgerContainer {
+      display: none; } }
   header .hamburgerContainer .logo img {
     padding-top: 5px;
     width: 75px; }
@@ -160,8 +162,6 @@ header nav {
   z-index: 2000;
   position: fixed;
   height: auto; }
-  .desktopView header nav {
-    transition: none; }
   header nav li {
     display: none; }
   header nav.open {
@@ -175,49 +175,15 @@ header nav {
       header nav.open li a {
         font-size: 20px;
         font-weight: bold; }
-  .desktopView header nav {
-    width: 100%;
-    top: 0; }
-    .desktopView header nav li {
-      display: block; }
-    .desktopView header nav.sticky {
-      background-color: black;
-      box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.75); }
-      .desktopView header nav.sticky ul {
-        position: relative; }
-        .desktopView header nav.sticky ul li a {
-          color: white; }
-        .desktopView header nav.sticky ul li.logo {
-          visibility: visible; }
-        .desktopView header nav.sticky ul li:hover a {
-          color: lightgray; }
   header nav ul {
     display: flex;
     flex-direction: column;
     position: relative;
     height: 100vh; }
-    .desktopView header nav ul {
-      flex-direction: row;
-      height: auto;
-      justify-content: center;
-      width: 97%;
-      margin: 0 auto; }
     header nav ul li {
       width: 16%;
       text-align: center;
       cursor: pointer; }
-      .desktopView header nav ul li {
-        border-bottom: 9px solid transparent; }
-        .desktopView header nav ul li:hover {
-          border-bottom: 9px solid grey; }
-        .desktopView header nav ul li.logo, .desktopView header nav ul li.slider {
-          border-bottom: none; }
-        .desktopView header nav ul li.logo {
-          width: 18%; }
-        .desktopView header nav ul li a {
-          padding: 40px 0; }
-      header nav ul li:hover a {
-        color: lightgray; }
       header nav ul li a {
         padding: 5px;
         color: white;
@@ -249,6 +215,42 @@ header nav {
           left: 0;
           bottom: 0;
           transition: left 0.2s linear; }
+
+@media (min-width: 769px) {
+  header nav {
+    transition: none;
+    width: 100%;
+    top: 0; }
+    header nav ul {
+      flex-direction: row;
+      height: auto;
+      justify-content: center;
+      width: 97%;
+      margin: 0 auto; }
+      header nav ul li {
+        display: block;
+        border-bottom: 9px solid transparent; }
+        header nav ul li:hover {
+          border-bottom: 9px solid grey; }
+          header nav ul li:hover a {
+            color: lightgray; }
+        header nav ul li.logo, header nav ul li.slider {
+          border-bottom: none; }
+        header nav ul li.logo {
+          width: 18%; }
+        header nav ul li a {
+          padding: 40px 0; }
+    header nav.sticky {
+      background-color: black;
+      box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.75); }
+      header nav.sticky ul {
+        position: relative; }
+        header nav.sticky ul li a {
+          color: white; }
+        header nav.sticky ul li.logo {
+          visibility: visible; }
+        header nav.sticky ul li:hover a {
+          color: lightgray; } }
 
 main .cover {
   width: 100%;
@@ -370,7 +372,7 @@ main #menu {
     main #menu .elenco div:not(.piatto) {
       margin-bottom: 10px;
       padding-right: 20px; }
-    @media (min-width: 768) {
+    @media (min-width: 769px) {
       main #menu .elenco {
         display: flex;
         justify-content: space-between;
@@ -389,7 +391,7 @@ main #menu {
     transition: max-height 0.5s ease-out; }
     main #menu .menuList > div h3 {
       font-size: 25px; }
-      @media (min-width: 768) {
+      @media (min-width: 769px) {
         main #menu .menuList > div h3 {
           font-size: 30px; } }
     main #menu .menuList > div.open {
