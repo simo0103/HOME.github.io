@@ -1,4 +1,5 @@
 @import "./mixin.scss";
+
 //reset
 * {
     margin: 0;
@@ -71,7 +72,7 @@ h1 {
     padding: 10px 0;
     border-bottom: 1px solid white;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 //-------------------------------//
@@ -90,9 +91,10 @@ h1 {
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.9);
 
-    > div {
+    >div {
         padding: 20% 2% 30%;
         text-align: right;
+
         @include tablet {
             padding: 30% 2%;
             width: 60%;
@@ -226,6 +228,7 @@ header {
         z-index: 2000;
         position: fixed;
         height: auto;
+
         li {
             display: none;
         }
@@ -283,6 +286,7 @@ header {
         }
     }
 }
+
 // HEADER TABLET - DESKTOP
 header nav {
     @include tablet {
@@ -296,12 +300,14 @@ header nav {
             justify-content: center;
             width: 97%;
             margin: 0 auto;
+
             li {
                 display: block;
                 border-bottom: 9px solid transparent;
 
                 &:hover {
                     border-bottom: 9px solid grey;
+
                     a {
                         color: lightgray;
                     }
@@ -374,7 +380,7 @@ main {
         width: 100%;
         padding-bottom: 50px;
 
-        > div {
+        >div {
             position: relative;
         }
 
@@ -435,22 +441,22 @@ main {
 
     //introduction
     .introduction {
-        > p {
+        >p {
             text-transform: uppercase;
             text-align: center;
-            line-height: 1.5em;
-            font-size: 18px;
+
             padding: 60px 10px 60px;
             font-weight: bold;
+
             span {
                 line-height: 1.8em;
-                &:first-of-type {
-                    font-size: 22px;
-                }
+                font-size: 22px;
             }
+
             strong {
                 text-decoration: underline;
             }
+
 
             @include tablet {
                 font-size: 32px;
@@ -460,11 +466,8 @@ main {
                 font-weight: bold;
 
                 span {
-                    line-height: 2em;
-                    &:first-of-type {
-                        font-size: 40px;
-                        line-height: 2.5em;
-                    }
+                    font-size: 40px;
+                    line-height: 2.5em;
                 }
             }
         }
@@ -569,13 +572,13 @@ main {
             @include svg(url(../images/svg/arr.svg), 5%, 11px);
         }
 
-        .menuList > div {
+        .menuList>div {
             overflow: hidden;
             max-height: 60px;
             transition: max-height 0.5s ease-out;
 
             h3 {
-                font-size: 25px;
+                font-size: 24px;
 
                 @include tablet {
                     font-size: 30px;
@@ -602,7 +605,7 @@ main {
         }
 
         .menuList {
-            > div {
+            >div {
                 margin: 0 auto 20px;
 
                 @include tablet {
@@ -652,6 +655,7 @@ main {
 
         .barList {
             text-align: center;
+            font-size: 17px;
 
             @include tablet {
                 display: flex;
@@ -670,7 +674,7 @@ main {
                 }
             }
 
-            > div {
+            >div {
                 @include tablet {
                     width: 45%;
                 }
@@ -695,7 +699,7 @@ main {
             text-align: left;
             padding-bottom: 10px;
 
-            > span {
+            >span {
                 &:first-child {
                     display: block;
                     text-transform: capitalize;
@@ -719,7 +723,7 @@ main {
                 background-color: black;
                 color: white;
 
-                > div {
+                >div {
                     height: 300px;
                 }
 
@@ -733,6 +737,9 @@ main {
 
                     h3 {
                         margin-bottom: 20px;
+                    }
+                    p {
+                        font-size: 17px;
                     }
                 }
 
@@ -776,6 +783,7 @@ main {
                     @include desktop_start {
                         height: 30vh;
                     }
+
                     @include desktop_mpdi {
                         height: 45vh;
                     }
@@ -822,6 +830,7 @@ main {
                     h3 {
                         font-size: 24px;
                         margin-bottom: 20px;
+
                         @include desktop_middle {
                             font-size: 28px;
                         }
@@ -903,6 +912,7 @@ main {
         .mapContainer {
             overflow: hidden;
             background: none !important;
+
             @include tablet {
                 width: 70%;
             }
@@ -939,7 +949,7 @@ main {
             font-size: 20px;
         }
 
-        > div:not(.overlay) {
+        >div:not(.overlay) {
             width: 33.33%;
 
             img {
@@ -1047,6 +1057,7 @@ footer {
         a {
             font-size: 10px;
             text-decoration: underline;
+
             @include tablet {
                 font-size: 20px;
             }
@@ -1144,6 +1155,7 @@ footer {
 }
 
 @-webkit-keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -1162,6 +1174,7 @@ footer {
 }
 
 @keyframes bounce {
+
     0%,
     20%,
     50%,
