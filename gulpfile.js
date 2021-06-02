@@ -49,16 +49,17 @@ function watchTask() {
     watch(
         [scssPath, jsPath],
         { interval: 1000 },
-        series(convertScss, parallel(cssTask, jsTask))
+        series(convertScss, cssTask)
+
     );
 }
 
 exports.cssTask = cssTask;
 exports.jsTask = jsTask;
-exports.imgTask = imgTask;
+exports.optimg = imgTask;
 exports.copyHtml = copyHtml;
 exports.convertScss = convertScss;
-exports.default = series(
-    parallel(copyHtml, imgTask, jsTask, cssTask),
-    watchTask
+exports.watch = watchTask;
+exports.build = series(
+    parallel(copyHtml, jsTask, cssTask)
 );
