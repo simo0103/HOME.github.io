@@ -61,5 +61,5 @@ exports.copyHtml = copyHtml;
 exports.convertScss = convertScss;
 exports.watch = watchTask;
 exports.build = series(
-    parallel(copyHtml, jsTask, cssTask, imgTask)
+    parallel(copyHtml, jsTask, cssTask)
 );

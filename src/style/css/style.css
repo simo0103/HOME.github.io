@@ -311,7 +311,7 @@ main .introduction > p {
     text-decoration: underline; }
   @media (min-width: 769px) {
     main .introduction > p {
-      padding: 100px 10%;
+      padding: 100px 20%;
       margin: 0;
       font-weight: bold; }
       main .introduction > p span {
