@@ -1,16 +1,17 @@
 var bar = {
     "birreSpina": [
-      {  "categoria": "birre chiare", "name": "heineken", "vol": "5,0" },
+      {  "categoria": "birre chiare", "name": "heineken silver", "vol": "4,0" },
       {  "categoria": "", "name": "icnusa", "vol": "4,6"},
+      {  "categoria": "", "name": "veldensteiner lager", "vol": "4,3" },
+      {  "categoria": "", "name": "veldensteiner pils", "vol": "4,9" },
       {  "categoria":"", "name": "icnusa non filtrata", "vol": "5,0" },
       {  "categoria": "", "name": "lagunitas ipa", "vol": "6,2" },
-      {  "categoria": "", "name": "erdinger weizen", "vol": "5,3" },
+      {  "categoria": "", "name": "veldensteiner weizen", "vol": "5,1" },
       {  "categoria": "", "name": "slalom strong", "vol": "9,0" },
-      {  "categoria": "", "name": "afflingem blonde", "vol": "6,7" },
 
       {  "categoria": "birre ambrate", "name": "bulldog strong ale", "vol": "7,1" },
       {  "categoria": "", "name": "mc farland red", "vol": "5,6" },
-      {  "categoria": "", "name": "newcasle", "vol": "4,6" },
+      {  "categoria": "", "name": "affligem rouge", "vol": "6,7" },
 
       {  "categoria": "birre scure", "name": "guinness", "vol": "4,2" }
 
@@ -18,19 +19,26 @@ var bar = {
   
     "birreBottiglia": [
         {  "categoria": "birre analcoliche", "name": "heineken 0.0", "vol": "0,03" },
+
         {  "categoria": "birre chiare", "name": "corona", "vol": "4,5" },
-        {  "categoria": "", "name": "budweiser", "vol": "5,0" },
+        {  "categoria": "", "name": "messina", "vol": "5,0" },
+        {  "categoria": "", "name": "gloken hell", "vol": "5,0" },
+        {  "categoria": "", "name": "eucharius", "vol": "4,9" },
         {  "categoria": "", "name": "icnusa non filtrata", "vol": "5,0" },
         {  "categoria": "", "name": "icnusa cruda", "vol": "4,9" },
         {  "categoria": "", "name": "entropia", "vol": "4,8" },
 
         {  "categoria": "birre senza glutine", "name": "iOi", "vol": "4,7" },
         {  "categoria": "", "name": "daura", "vol": "5,4" },
-        {  "categoria": "weisse", "name": "erdinger pikantus", "vol": "7,3" },
+
+        {  "categoria": "weisse", "name": "hacker pschorr", "vol": "5,5" },
         {  "categoria": "", "name": "simon weissbier", "vol": "5,4" },
-        {  "categoria": "", "name": "hacker pschorr sternweisse", "vol": "5,5" },
-        {  "categoria": "birre doppio malto", "name": "affligem triple", "vol": "9,0" },
+        {  "categoria": "", "name": "moretti la bianca", "vol": "5,0" },
+
+        {  "categoria": "birre doppio malto", "name": "westmalle dubble", "vol": "6,5" },
         {  "categoria": "", "name": "gotha", "vol": "7,7" },
+        {  "categoria": "", "name": "avanti marchi", "vol": "6,5" },
+
 
     ],
     "vini": [
