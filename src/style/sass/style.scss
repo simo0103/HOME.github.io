@@ -972,7 +972,16 @@ main {
         font-size: 25px;
 
         @include tablet {
-            margin-bottom: 400px;
+            margin-bottom: 100px;
+        }
+        h3 {
+            margin-bottom: 20px;
+        }
+        img {
+            width: 80%;
+            @include tablet {
+                width: 30%;
+            }
         }
 
         p {
