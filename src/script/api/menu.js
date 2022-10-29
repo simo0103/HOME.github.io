@@ -15,52 +15,43 @@ var menu = {
     "ingredienti": "penne, sugo di pomodoro, peperoncino"
   },
   {
-    "name": "gramigna alla salsiggia",
+    "name": "gramigna alla salsiccia",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   },
   {
     "name": "rigatoni alla matriciana",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   },
   {
     "name": "spaghetti pomodoro e basilico",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   },
   {
     "name": "spagnetti alla carbonara",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   },
   {
-    "name": "spaghetti all'amatriciana",
+    "name": "spaghetti pomodoro e basilico",
     "price": 10,
-    "ingredienti": "spaghetti, uovo, guanciale"
+    "ingredienti": "pasta"
   },
   {
-    "name": "spaghetti alla siciliana",
-    "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
-  },
-  {
-    "name": "garganelli zuzzhine speck e panna",
+    "name": "garganelli zucchine speck e panna",
     "price": 10,
     "ingredienti": "tagliatelle, cipolla, fagioli"
   },
   {
     "name": "penne alla vodka",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   }
 
   ],
-  "pastafresca": [{
-    "name": "tagliatelle panna prosciutto e piselli",
-    "price": 10,
-    "ingredienti": "maccheroncini, sugo, guanciale, vodka"
-  },
+  "pastafresca": [
   {
     "name": "tagliatelle alla romagnola",
     "price": 10,
@@ -74,22 +65,22 @@ var menu = {
   {
     "name": "tortelloni burro e salvia",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   },
   {
     "name": "tortelloni burro e oro e gorgonzola",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   },
   {
     "name": "gnocchi al gorgonzola e noci",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   },
   {
     "name": "gnocchi alla sorrentina",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   },
   {
     "name": "tortellini goccia d'oro",
@@ -132,23 +123,19 @@ var menu = {
     "price": 15
   },
   {
+    "name": "costata all'aceto balsamico",
+    "price": 15
+  },
+  {
+    "name": "costata al pepe verde",
+    "price": 15
+  },
+  {
     "name": "tagliata all'olio profumato",
     "price": 15
   },
   {
-    "name": "filetto alla griglia",
-    "price": 15
-  },
-  {
-    "name": "filetto al pepe verde",
-    "price": 15
-  },
-  {
-    "name": "filetto all'aceto balsamico",
-    "price": 15
-  },
-  {
-    "name": "tagliata di filetto all'olio profumato",
+    "name": "tagliata all'olio profumato",
     "price": 15
   },
   {
@@ -162,6 +149,10 @@ var menu = {
   {
     "name": "straccetti di pollo con rucola e grana",
     "price": 15
+  },
+  {
+    "name": "straccetti di pollo al pepe verde",
+    "price": 15
   }
   ],
 
@@ -171,53 +162,42 @@ var menu = {
     "ingredienti": "maccheroncini, sugo, guanciale, vodka"
   },
   {
-    "name": "caprese con prosciutto crudo",
-    "price": 10,
-    "ingredienti": "maccheroncini, ragù, panna"
-  },
-  {
     "name": "carpaccio di bresaola",
     "price": 10,
     "ingredienti": "penne, sugo di pomodoro, peperoncino"
   },
   {
-    "name": "bresaola e burrata",
-    "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
-  },
-  {
     "name": "bresaola sedano, funghi e grana",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   },
   {
     "name": "roast beef",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   },
   {
     "name": "roast beef con rucola e grana",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
+    "ingredienti": "pasta"
   },
   {
     "name": "prosciutto crudo e melone (stagionale)",
     "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
-  },
-  {
-    "name": "antipasto dragon",
-    "price": 10,
-    "ingredienti": "pasta, cipolla, fagioli"
-  },
+    "ingredienti": "pasta"
+  }
   ],
 
   "contorni": [{
-    "name": "patate lesse",
+    "name": "spincaci con aglio e peperoncino",
     "price": 4
   },
   {
     "name": "fagiolini all'uccelletto",
+    "price": 5
+  },
+  {
+    "name": "fverdure alla griglia",
     "price": 5
   },
   {
@@ -233,6 +213,7 @@ var menu = {
     "price": 5.50
   }
   ],
+
   "hamburger": [{
     "name": "hamburger",
     "price": 7,
@@ -249,7 +230,7 @@ var menu = {
     "ingredienti": "burger 150g, cipolla, formaggio fuso, bacon, salsa bbq"
   },
   {
-    "name": "dievel burger",
+    "name": "dievel dragon",
     "price": 8,
     "ingredienti": "burger 150g, cipolla, salsa calabrese"
   },
@@ -262,11 +243,6 @@ var menu = {
     "name": "giant burger",
     "price": 8,
     "ingredienti": "burger 220g, pomodoro, insalata"
-  },
-  {
-    "name": "popye burger",
-    "price": 8,
-    "ingredienti": "burger di spinaci, formaggio fuso, pomodoro, insalata"
   },
   {
     "name": "chicken burger",

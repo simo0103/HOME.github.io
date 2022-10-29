@@ -25,7 +25,12 @@ h2 {
     padding-bottom: 50px;
     font-size: 40px;
 }
-
+a.menuLink {
+    color: white;
+    text-decoration: underline;
+    text-transform: uppercase;
+    display: block;
+}
 h3 {
     font-size: 27px;
     text-transform: uppercase;
@@ -742,8 +747,8 @@ main {
                     p {
                         font-size: 20px;
                     }
+                   
                 }
-
                 .right {
                     display: none;
                 }
