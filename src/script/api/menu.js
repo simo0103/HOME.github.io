@@ -11,7 +11,7 @@ var menu = {
   },
   {
     "name": "pennette all'arrabbiata",
-    "price": 10,
+    "price": 11,
     "ingredienti": "penne, sugo di pomodoro, peperoncino"
   },
   {
